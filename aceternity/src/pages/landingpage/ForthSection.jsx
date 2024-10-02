@@ -2,6 +2,9 @@ import React from "react";
 import "./thirdSection.css";
 
 const ForthSection = () => {
+
+
+  
   const firstLine = [
     {
       image: "/tamplats/startup-1.webp",
