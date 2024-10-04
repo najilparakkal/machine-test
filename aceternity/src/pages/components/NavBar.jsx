@@ -27,7 +27,7 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 z-50 flex items-center justify-between px-6 py-4 h-20 mt-2 rounded-xl shadow-md transition-all duration-300 ease-in-out ${
+      className={`fixed top-0 left-0 z-50 flex items-center justify-between px-6 py-4 h-16 mt-2 rounded-xl shadow-md transition-all duration-300 ease-in-out ${
         isScrolled ? "w-full lg:w-5/6 lg:mx-28 bg-[#171717]" : "w-full bg-black"
       }`}
     >
@@ -58,7 +58,7 @@ const NavBar = () => {
           <a href="#" className="hover:text-white transition-colors">
             Pricing
           </a>
-          <a href="#" className="hover:text-white transition-colors">
+          <a onClick={()=>navigate("/blogs")} className="hover:text-white transition-colors">
             Blog
           </a>
           <a href="#" className="hover:text-white transition-colors">
@@ -70,12 +70,12 @@ const NavBar = () => {
       <div className="flex items-center space-x-4">
         <a
           onClick={() => navigate("/login")}
-          className="hidden md:block text-gray-400 text-base text-[15px] hover:text-white transition-colors py-3 px-6 rounded-lg hover:bg-[#34B1D9]"
+          className="hidden md:block text-gray-400 text-base text-[15px] hover:text-white transition-colors py-2 px-6 rounded-lg hover:bg-[#34B1D9]"
         >
           Register
         </a>
 
-        <button className="hidden md:block bg-[#34B1D9] text-black font-semibold py-3 px-6 text-[15px] rounded-lg w-36 hover:bg-gray-100 transition-colors">
+        <button className="hidden md:block bg-[#34B1D9] text-black font-semibold py-2 px-6 text-[15px] rounded-lg w-36 hover:bg-gray-100 transition-colors">
           Book a demo
         </button>
 
@@ -92,7 +92,6 @@ const NavBar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="absolute top-14 left-0 right-0 bg-black border-t border-gray-800 text-white flex flex-col space-y-2 px-6 py-4 md:hidden">
           <a href="#" className="hover:text-gray-300 transition-colors">
