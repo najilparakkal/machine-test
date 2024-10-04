@@ -61,7 +61,7 @@ const NavBar = () => {
           <a onClick={()=>navigate("/blogs")} className="hover:text-white transition-colors">
             Blog
           </a>
-          <a href="#" className="hover:text-white transition-colors">
+          <a   onClick={()=>navigate("/contact")} className="hover:text-white transition-colors">
             Contact
           </a>
         </div>
