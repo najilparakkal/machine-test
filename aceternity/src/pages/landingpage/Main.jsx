@@ -2,6 +2,8 @@ import React from 'react'
 import NavBar from '../components/NavBar'
 import FirstSection from './FirstSection'
 import { HeroScrollDemo } from '../acertenityComponents/SecondSection'
+import ThirdSection from './ThirdSection'
+import ForthSection from './ForthSection'
 
 const Main = () => {
   return (
@@ -9,9 +11,9 @@ const Main = () => {
     <NavBar />
     <FirstSection />
     <HeroScrollDemo />
-    {/* <ThirdSection/>
-      <ForthSection/>
-      <FifthSection/>
+   <ThirdSection/>
+        <ForthSection/>
+     {/* <FifthSection/>
       <SixthSection/>
       <FooterSection/> */}
   </div>

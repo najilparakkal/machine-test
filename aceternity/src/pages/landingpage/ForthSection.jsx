@@ -1,150 +1,79 @@
 import React from "react";
-import "./thirdSection.css";
+import { HeroParallax } from "../acertenityComponents/ForthSectionCard";
+import { TbTool } from "react-icons/tb";
 
 const ForthSection = () => {
-
-
-  
-  const firstLine = [
-    {
-      image: "/tamplats/startup-1.webp",
-    },
-    {
-      image: "/tamplats/startup-2.webp",
-    },
-    {
-      image: "/tamplats/startup-3.webp",
-    },
-  ];
-  const secondLine = [
-    {
-      image: "/tamplats/ai-saas-1.webp",
-    },
-    {
-      image: "/tamplats/ai-saas-2.webp",
-    },
-    {
-      image: "/tamplats/ai-saas.webp",
-    },
-  ];
-  const thirdline = [
-    {
-      image: "/packs card/hero-sections.webp",
-    },
-    {
-      image: "/packs card/logo-clouds.webp",
-    },
-    {
-      image: "/packs card/features-section.webp",
-    },
-  ];
-
   return (
-    <div className="w-full bg-black mt-[-100px]  h-auto">
-      <div className="p-7 ">
-        <h3 className="text-[#A855F7] mt-4 font-bold text-xl md:text-2xl">Templates</h3>
-        <p className="text-[#C9CACB] mt-4 text-sm md:text-base">
-          Modern and minimalist templates for building your next product.
-        </p>
-      </div>
-
-      {/* First Line */}
-      <div className="w-full flex justify-center bg-black">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
-          <div className="bg-black rounded-lg p-4 flex flex-col items-start">
-            <p className="text-white mb-2 font-bold text-sm md:text-base lg:text-lg">
-              Startup Landing Page Template
-            </p>
-            <p className="text-[#C9CACB] mb-2 font-normal text-xs md:text-sm lg:text-base">
-              A simple, clean, modern and minimalistic landing page template for
-              startups. Filled with microinteractions to keep your users engaged.
-            </p>
-            <button className="px-4 py-2 bg-white mt-2 font-semibold rounded-lg text-sm md:text-base">
-              Buy now $49
-            </button>
-          </div>
-          {firstLine.map((card, index) => (
-            <div key={index} className="bg-gray-800 rounded-lg overflow-hidden">
-              <img
-                src={card.image}
-                alt={`Card ${index + 1}`}
-                className="w-full h-auto"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Second Line */}
-      <div className="w-full flex justify-center">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
-          <div className="bg-black rounded-lg p-4 flex flex-col items-start">
-            <p className="text-white mb-2 font-bold text-sm md:text-base lg:text-lg">
-              AI SaaS Template
-            </p>
-            <p className="text-[#C9CACB] mb-2 font-normal text-xs md:text-sm lg:text-base">
-              Every AI SaaS template is a multi-page template focused on AI
-              applications offering SaaS solutions.
-            </p>
-            <button className="px-4 py-2 bg-white mt-2 font-semibold rounded-lg text-sm md:text-base">
-              Buy now $49
-            </button>
-          </div>
-          {secondLine.map((card, index) => (
-            <div key={index} className="bg-gray-800 rounded-lg overflow-hidden">
-              <img
-                src={card.image}
-                alt={`Card ${index + 1}`}
-                className="w-full h-auto"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="w-full flex justify-center bg-black ">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
-          <div className="relative rounded-lg p-4 flex flex-col items-start">
-            <div className="absolute inset-0 z-10 bg-gradient-to-t from-black gradient-large to-transparent rounded-lg"></div>
-
-            <div className="relative z-0">
-              <p className="text-white mb-2 font-bold text-sm md:text-base lg:text-lg">
-                Proactiv Marketing Template
-              </p>
-              <p className="text-[#C9CACB] mb-2 font-normal text-xs md:text-sm lg:text-base">
-                Proactiv is a marketing template designed for SaaS companies
-                focusing on marketing tools for social media.
-              </p>
-              <button className="px-4 py-2 bg-white mt-2 font-semibold rounded-lg text-sm md:text-base">
-                Buy now $59
-              </button>
+    <div className="bg-black w-full">
+      <div className="h-[600px] flex justify-center items-center bg-black shadow-2xl">
+        <div className="flex flex-col items-center p-4 rounded">
+          <div className="p-1 bg-[#222222] mb-4 rounded-md hover:shadow-lg transition-all duration-1000 transform hover:scale-95">
+            <div className="p-3 bg-black rounded-md shadow-2xl shadow-[#06B6D4]">
+              <TbTool className="text-[#06B6D4] h-6 w-6 transform transition-transform duration-300 hover:scale-125" />
             </div>
           </div>
 
-          {thirdline.map((card, index) => (
-            <div
-              key={index}
-              className="relative bg-gray-800 rounded-lg overflow-hidden group"
-            >
-              <div className="absolute inset-0 z-10 bg-black opacity-50 gradient-large group-hover:opacity-70 transition-opacity duration-300"></div>
-
-              <img
-                src={card.image}
-                alt={`Card ${index + 1}`}
-                className="w-full h-auto relative z-0"
-              />
-            </div>
-          ))}
+          <h1 className="text-center text-transparent bg-gradient-to-b bg-clip-text from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white font-semibold text-4xl md:text-[50px]">
+            Perfect Set of Tools
+          </h1>
+          <p className="text-center text-white mt-3 text-base md:text-lg lg:text-[20px]">
+            Proactiv comes with perfect tools for the perfect jobs out there.
+          </p>
         </div>
       </div>
-
-      <div className="w-full bg-black flex justify-center py-4">
-        <button className="px-8 md:px-12 py-2 bg-white rounded-lg font-semibold shadow-lg text-sm md:text-base">
-          Show More
-        </button>
-      </div>
+      <HeroParallax products={products} />;
     </div>
   );
 };
+export const products = [
+  {
+    title: "Moonbeam",
+    thumbnail: "/public/therdSection/first.png",
+  },
+  {
+    title: "Cursor",
+    thumbnail: "/public/therdSection/second-backup.webp",
+  },
+  {
+    title: "Rogue",
+    thumbnail: "/public/therdSection/fourth-backup.webp",
+  },
 
-export default React.memo(ForthSection);
+  {
+    title: "Editorially",
+    link: "https://editorially.org",
+    thumbnail: "/public/therdSection/third.webp",
+  },
+  {
+    title: "Moonbeam",
+    thumbnail: "/public/therdSection/first.png",
+  },
+  {
+    title: "Cursor",
+    thumbnail: "/public/therdSection/second-backup.webp",
+  },
+  {
+    title: "Rogue",
+    thumbnail: "/public/therdSection/fourth-backup.webp",
+  },
+
+  {
+    title: "Editorially",
+    link: "https://editorially.org",
+    thumbnail: "/public/therdSection/third.webp",
+  },
+  {
+    title: "Moonbeam",
+    thumbnail: "/public/therdSection/first.png",
+  },
+  {
+    title: "Cursor",
+    thumbnail: "/public/therdSection/second-backup.webp",
+  },
+  {
+    title: "Rogue",
+    thumbnail: "/public/therdSection/fourth-backup.webp",
+  },
+];
+
+export default ForthSection;

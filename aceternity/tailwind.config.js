@@ -14,6 +14,10 @@ export default {
     theme: {
       extend: {
         keyframes: {
+          move: {
+            "0%": { transform: "translateX(-200px)" },
+            "100%": { transform: "translateX(200px)" },
+          },
           slideInFromLeft: {
             '0%': { transform: 'translateX(-100%)', opacity: '0' },
             '100%': { transform: 'translateX(0)', opacity: '1' },
@@ -27,6 +31,7 @@ export default {
         animation: {
           slideInFromLeft: 'slideInFromLeft 1s ease-out forwards',
           'warp-speed': 'warpSpeed 5s linear infinite',
+          move: "move 5s linear infinite",
         },
         backgroundSize: {
           '300%': '300% 300%',
