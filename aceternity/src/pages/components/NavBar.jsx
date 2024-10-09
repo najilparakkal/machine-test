@@ -26,13 +26,22 @@ const NavBar = () => {
   }, []);
 
   return (
-    <nav
-      className={`fixed top-0 left-0 z-50 flex items-center justify-between px-6 py-4 h-16 mt-2 rounded-xl shadow-md transition-all duration-300 ease-in-out ${
-        isScrolled ? "w-full lg:w-5/6 lg:mx-28 bg-[#171717]" : "w-full bg-black"
-      }`}
-    >
+<nav
+  className={`fixed top-0 z-50 flex items-center justify-between px-6 py-4 h-16 mt-2 rounded-xl shadow-md
+    ${isScrolled
+      ? "left-[5%] right-[5%] bg-[#171717] lg:left-[8.33%] lg:right-[8.33%] transition-[left,right,background-color,width] duration-500 ease"
+      : "left-0 right-0 bg-black transition-[left,right,background-color,width] duration-600 ease-linear"
+    }`}
+>
+
+
+
+  
       <div className="flex items-center space-x-11">
-        <div className="flex items-center  space-x-3 hover:cursor-pointer" onClick={()=>navigate("/")}>
+        <div
+          className="flex items-center  space-x-3 hover:cursor-pointer"
+          onClick={() => navigate("/")}
+        >
           <div className="bg-white rounded-full">
             <svg
               width="25"
@@ -58,10 +67,16 @@ const NavBar = () => {
           <a href="#" className="hover:text-white transition-colors">
             Pricing
           </a>
-          <a onClick={()=>navigate("/blogs")} className="hover:text-white transition-colors">
+          <a
+            onClick={() => navigate("/blogs")}
+            className="hover:text-white transition-colors"
+          >
             Blog
           </a>
-          <a   onClick={()=>navigate("/contact")} className="hover:text-white transition-colors">
+          <a
+            onClick={() => navigate("/contact")}
+            className="hover:text-white transition-colors"
+          >
             Contact
           </a>
         </div>
