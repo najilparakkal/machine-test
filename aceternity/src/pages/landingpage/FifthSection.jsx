@@ -158,126 +158,132 @@ const FifthSection = () => {
 
   return (
     <div className="bg-black w-full relative">
-      <div className="w-full">
-        <div className="h-[600px] w-full   flex ">
-          <div className="max-w-4xl mx-auto flex flex-col items-center text-center justify-center">
-            <div className="inline-block mb-8 p-[4px] bg-[#2B2B2B]  rounded-lg">
-              <TbLocationBolt className="bg-black text-[#06B6D4] p-3 w-8 h-8 md:w-12 md:h-12 flex-shrink-0" />
-            </div>
-            <h2 className="text-6xl text-white  mb-4 tracking-tight">
-              Used by entrepreneurs
-            </h2>
-            <p className="text-xl text-gray-400">
-              Proactiv is used by serial entrepreneurs and overachievers.
-            </p>
+    <div className="w-full">
+      <div  className="h-[600px] w-full flex">
+        <div className="max-w-4xl mx-auto flex flex-col items-center text-center justify-center">
+          <div className="inline-block mb-8 p-[4px] bg-[#2B2B2B] rounded-lg">
+            <TbLocationBolt className="bg-black text-[#06B6D4] p-3 w-8 h-8 md:w-12 md:h-12 flex-shrink-0" />
           </div>
-        </div>
-        <div className="p-5 w-full  flex relative shadow-2xl shadow-stone-950 z-20">
-          <div className="absolute inset-0 flex items-center h-full  bg-gradient-to-b from-black to-transparent justify-center z-30">
-            <TestimonialSection />
-          </div>
-          <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black to-transparent z-10" />
-
-          <div className="w-full md:w-2/6 relative">
-            <Slider {...settings}>
-              {cardsData.map((card, index) => (
-                <div key={index} className="p-4">
-                  <div className="relative z-10">
-                    <div className="absolute inset-0 rounded-2xl shadow-lg bg-[#18181B] -z-10"></div>
-                    <div className="bg-[#18181B] gap-4 border border-gray-800 rounded-2xl p-6 flex flex-col items-start w-full">
-                      <p className="text-gray-600 text-start">
-                        {card.description}
-                      </p>
-                      <div className="flex items-center gap-4">
-                        <img
-                          src={card.image}
-                          alt={card.title}
-                          className="w-12 h-12 rounded-full mb-4"
-                        />
-                        <div className="mb-4">
-                          <h2 className="text-lg text-gray-700 font-bold mb-1">
-                            {card.title}
-                          </h2>
-                          <p className="text-gray-700 mt-[-3px]">
-                            {card.userName}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </Slider>
-          </div>
-
-          <div className="w-full md:w-2/6 relative">
-            <Slider {...settings2}>
-              {cardsData.map((card, index) => (
-                <div key={index} className="p-4">
-                  <div className="relative z-10">
-                    <div className="absolute inset-0 rounded-2xl shadow-lg bg-[#18181B] -z-10"></div>
-                    <div className="bg-[#18181B] border gap-4 border-gray-800 rounded-2xl p-6 flex flex-col items-start w-full">
-                      <p className="text-gray-700 text-start">
-                        {card.description}
-                      </p>
-                      <div className="flex items-center gap-4">
-                        <img
-                          src={card.image}
-                          alt={card.title}
-                          className="w-12 h-12 rounded-full mb-4"
-                        />
-                        <div className="mb-4">
-                          <h2 className="text-lg text-gray-700 font-bold mb-1">
-                            {card.title}
-                          </h2>
-                          <p className="text-gray-700 mt-[-3px]">
-                            {card.userName}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </Slider>
-          </div>
-
-          <div className="w-full md:w-2/6 relative ">
-            <Slider {...settings}>
-              {cardsData.map((card, index) => (
-                <div key={index} className="p-4">
-                  <div className="relative z-10">
-                    <div className="absolute inset-0 rounded-2xl gap-4 shadow-lg bg-[#18181B] -z-10"></div>
-                    <div className="bg-[#18181B] border border-gray-800 rounded-2xl p-6 flex flex-col items-start w-full">
-                      <p className="text-gray-700 text-start">
-                        {card.description}
-                      </p>
-                      <div className="flex items-center gap-1">
-                        <img
-                          src={card.image}
-                          alt={card.title}
-                          className="w-12 h-12 rounded-full mb-4"
-                        />
-                        <div className="mb-4">
-                          <h2 className="text-lg text-gray-700 font-bold mb-1">
-                            {card.title}
-                          </h2>
-                          <p className="text-gray-700 mt-[-3px]">
-                            {card.userName}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </Slider>
-          </div>
-
-          <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-black to-transparent z-10" />
+          <h2 className="text-6xl text-white mb-4 tracking-tight">
+            Used by entrepreneurs
+          </h2>
+          <p className="text-xl text-gray-400">
+            Proactiv is used by serial entrepreneurs and overachievers.
+          </p>
         </div>
       </div>
+  
+      <div className="p-5 w-full flex relative shadow-2xl shadow-stone-950 z-20">
+        <div className="absolute inset-0 flex items-center h-full bg-gradient-to-b from-black to-transparent justify-center z-30">
+          <TestimonialSection />
+        </div>
+  
+        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black to-transparent z-10" />
+  
+        {/* First slider: shown on small and large screens */}
+        <div className="w-full md:w-2/6 relative">
+          <Slider {...settings}>
+            {cardsData.map((card, index) => (
+              <div key={index} className="p-4">
+                <div className="relative z-10">
+                  <div className="absolute inset-0 rounded-2xl shadow-lg bg-[#18181B] -z-10"></div>
+                  <div className="bg-[#18181B] gap-4 border border-gray-800 rounded-2xl p-6 flex flex-col items-start w-full">
+                    <p className="text-gray-600 text-start">
+                      {card.description}
+                    </p>
+                    <div className="flex items-center gap-4">
+                      <img
+                        src={card.image}
+                        alt={card.title}
+                        className="w-12 h-12 rounded-full mb-4"
+                      />
+                      <div className="mb-4">
+                        <h2 className="text-lg text-gray-700 font-bold mb-1">
+                          {card.title}
+                        </h2>
+                        <p className="text-gray-700 mt-[-3px]">
+                          {card.userName}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
+  
+        {/* Second slider: hidden on small screens */}
+        <div className="hidden md:block w-full md:w-2/6 relative">
+          <Slider {...settings2}>
+            {cardsData.map((card, index) => (
+              <div key={index} className="p-4">
+                <div className="relative z-10">
+                  <div className="absolute inset-0 rounded-2xl shadow-lg bg-[#18181B] -z-10"></div>
+                  <div className="bg-[#18181B] border gap-4 border-gray-800 rounded-2xl p-6 flex flex-col items-start w-full">
+                    <p className="text-gray-700 text-start">
+                      {card.description}
+                    </p>
+                    <div className="flex items-center gap-4">
+                      <img
+                        src={card.image}
+                        alt={card.title}
+                        className="w-12 h-12 rounded-full mb-4"
+                      />
+                      <div className="mb-4">
+                        <h2 className="text-lg text-gray-700 font-bold mb-1">
+                          {card.title}
+                        </h2>
+                        <p className="text-gray-700 mt-[-3px]">
+                          {card.userName}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
+  
+        {/* Third slider: hidden on small screens */}
+        <div className="hidden md:block w-full md:w-2/6 relative">
+          <Slider {...settings}>
+            {cardsData.map((card, index) => (
+              <div key={index} className="p-4">
+                <div className="relative z-10">
+                  <div className="absolute inset-0 rounded-2xl gap-4 shadow-lg bg-[#18181B] -z-10"></div>
+                  <div className="bg-[#18181B] border border-gray-800 rounded-2xl p-6 flex flex-col items-start w-full">
+                    <p className="text-gray-700 text-start">
+                      {card.description}
+                    </p>
+                    <div className="flex items-center gap-1">
+                      <img
+                        src={card.image}
+                        alt={card.title}
+                        className="w-12 h-12 rounded-full mb-4"
+                      />
+                      <div className="mb-4">
+                        <h2 className="text-lg text-gray-700 font-bold mb-1">
+                          {card.title}
+                        </h2>
+                        <p className="text-gray-700 mt-[-3px]">
+                          {card.userName}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
+  
+        <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-black to-transparent z-10" />
+      </div>
     </div>
+  </div>
+  
   );
 };
 
