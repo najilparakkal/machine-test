@@ -90,7 +90,8 @@ export const Header = () => {
   return (
     <>
       <div className="max-w-5xl relative mx-auto py-20 md:py-40 px-4 w-full -mt-72 left-0 top-0">
-        <div className="-mb-80 space-y-16 md:space-y-24 font-bold w-full md:w-1/2">
+        <div className=" space-y-16 md:space-y-24 font-bold w-full ">
+          <div className=" flex w-full gap-14">
           <div className="gap-3">
             <div className="flex items-center gap-4">
               <MdOutlineForwardToInbox className="bg-black text-[#06B6D4] w-8 h-8 md:w-12 md:h-12 flex-shrink-0" />
@@ -149,7 +150,8 @@ export const Header = () => {
               all the platforms they use.
             </p>
           </div>
-
+          </div>
+          <div className=" flex w-full gap-14">
           <div className="gap-3">
             <div className="flex gap-4">
               <svg
@@ -210,6 +212,7 @@ export const Header = () => {
               We have cloned Zapier and built our very own apps automation
               platform.
             </p>
+          </div>
           </div>
         </div>
       </div>

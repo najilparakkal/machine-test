@@ -26,17 +26,14 @@ const NavBar = () => {
   }, []);
 
   return (
-<nav
-  className={`fixed top-0 z-50 flex items-center justify-between px-6 py-4 h-16 mt-2 rounded-xl shadow-md
-    ${isScrolled
-      ? "left-[5%] right-[5%] bg-[#171717] lg:left-[8.33%] lg:right-[8.33%] transition-[left,right,background-color,width] duration-500 ease"
-      : "left-0 right-0 bg-black transition-[left,right,background-color,width] duration-600 ease-linear"
+    <nav
+      className={`fixed top-0 z-50 flex items-center justify-between px-6 py-4 h-16 mt-2 rounded-xl shadow-md
+    ${
+      isScrolled
+        ? "left-[5%] right-[5%] bg-[#171717] lg:left-[8.33%] lg:right-[8.33%] transition-[left,right,background-color,width] duration-500 ease"
+        : "left-0 right-0 bg-black transition-[left,right,background-color,width] duration-690 ease-linear"
     }`}
->
-
-
-
-  
+    >
       <div className="flex items-center space-x-11">
         <div
           className="flex items-center  space-x-3 hover:cursor-pointer"
