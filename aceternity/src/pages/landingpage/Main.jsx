@@ -4,6 +4,7 @@ import FirstSection from './FirstSection'
 import { HeroScrollDemo } from '../acertenityComponents/SecondSection'
 import ThirdSection from './ThirdSection'
 import ForthSection from './ForthSection'
+import FifthSection from './FifthSection'
 
 const Main = () => {
   return (
@@ -13,8 +14,8 @@ const Main = () => {
     <HeroScrollDemo />
    <ThirdSection/>
         <ForthSection/>
-     {/* <FifthSection/>
-      <SixthSection/>
+     <FifthSection/>
+    {/*   <SixthSection/>
       <FooterSection/> */}
   </div>
   )

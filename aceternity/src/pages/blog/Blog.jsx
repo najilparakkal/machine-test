@@ -7,27 +7,27 @@ import Footer from "../components/Footer";
 const Blog = () => {
   const cardsData = [
     {
-      src: "/public/blogs/image_url=https_2F_2Fimages.unsplash.com_2Fphoto-1696429175928-793a1cdef1d3_q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA_3D_3D&w=828&q=75.jpg",
+      src: "/blogs/image_url=https_2F_2Fimages.unsplash.com_2Fphoto-1696429175928-793a1cdef1d3_q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA_3D_3D&w=828&q=75.jpg",
       title: "Changelog for 2024",
       description:
         "Explore the latest updates and enhancements in our 2024 changelog. Discover new features and improve...",
-      profileSrc: "/public/blogs/test.png",
+      profileSrc: "/blogs/test.png",
       profileName: "Manu Arora",
     },
     {
-      src: "/public/blogs/image_url=https_2F_2Fimages.unsplash.com_2Fphoto-1493612276216-ee3925520721_q=80&w=3308&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA_3D_3D&w=828&q=75.jpg",
+      src: "/blogs/image_url=https_2F_2Fimages.unsplash.com_2Fphoto-1493612276216-ee3925520721_q=80&w=3308&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA_3D_3D&w=828&q=75.jpg",
       title: "What is marketing anyway",
       description:
         "Explore the latest updates and enhancements in our 2024 changelog. Discover new features and improve...",
-      profileSrc: "/public/blogs/test.png",
+      profileSrc: "/blogs/test.png",
       profileName: "Manu Arora",
     },
     {
-      src: "/public/blogs/image_url=https_2F_2Fimages.unsplash.com_2Fphoto-1560958089-b8a1929cea89_q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA_3D_3D&w=1920&q=75.jpg",
+      src: "/blogs/image_url=https_2F_2Fimages.unsplash.com_2Fphoto-1560958089-b8a1929cea89_q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA_3D_3D&w=1920&q=75.jpg",
       title: "Cool things to do with AI",
       description:
         "Explore the latest AI tools and applications that are revolutionizing various industries. From image...",
-      profileSrc: "/public/blogs/test.png",
+      profileSrc: "/blogs/test.png",
       profileName: "Manu Arora",
     },
   ];
@@ -38,21 +38,21 @@ const Blog = () => {
       description:
         "Explore the latest AI tools and applications that are revolutionizing various in...",
       date: "July 14, 2022",
-      authorImage: "/public/blogs/test.png",
+      authorImage: "/blogs/test.png",
     },
     {
       title: "Top 5 LLM of all time",
       description:
         "Explore the latest AI tools and applications that are revolutionizing various in...",
       date: "July 14, 2021",
-      authorImage: "/public/blogs/test.png",
+      authorImage: "/blogs/test.png",
     },
     {
       title: "What is AI anyway?",
       description:
         "Explore the latest AI tools and applications that are revolutionizing various in...",
       date: "July 14, 2020",
-      authorImage: "/public/blogs/test.png",
+      authorImage: "/blogs/test.png",
     },
   ];
   return (

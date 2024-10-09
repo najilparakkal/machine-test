@@ -93,7 +93,7 @@ export const Card = ({ rotate, scale, children }) => {
       <div className="w-full h-full bg-black rounded-[30px] p-6 ">
         <div className="h-full w-full overflow-hidden rounded-[30px] dark:bg-zinc-900 relative">
           <img
-            src="/public/seondSection/first.png"
+            src="/seondSection/first.png"
             alt="Card Image"
             className="h-[1100px] -mt-24 w-full object-cover rounded-2xl "
           />

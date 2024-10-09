@@ -102,7 +102,7 @@ const Skeleton = () => {
     </div>)
   );
 };
-const Sparkles = () => {
+ export const Sparkles = () => {
   const randomMove = () => Math.random() * 2 - 1;
   const randomOpacity = () => Math.random();
   const random = () => Math.random();

@@ -28,51 +28,51 @@ const ForthSection = () => {
 export const products = [
   {
     title: "Moonbeam",
-    thumbnail: "/public/therdSection/first.png",
+    thumbnail: "/therdSection/first.png",
   },
   {
     title: "Cursor",
-    thumbnail: "/public/therdSection/second-backup.webp",
+    thumbnail: "/therdSection/second-backup.webp",
   },
   {
     title: "Rogue",
-    thumbnail: "/public/therdSection/fourth-backup.webp",
+    thumbnail: "/therdSection/fourth-backup.webp",
   },
 
   {
     title: "Editorially",
     link: "https://editorially.org",
-    thumbnail: "/public/therdSection/third.webp",
+    thumbnail: "/therdSection/third.webp",
   },
   {
     title: "Moonbeam",
-    thumbnail: "/public/therdSection/first.png",
+    thumbnail: "/therdSection/first.png",
   },
   {
     title: "Cursor",
-    thumbnail: "/public/therdSection/second-backup.webp",
+    thumbnail: "/therdSection/second-backup.webp",
   },
   {
     title: "Rogue",
-    thumbnail: "/public/therdSection/fourth-backup.webp",
+    thumbnail: "/therdSection/fourth-backup.webp",
   },
 
   {
     title: "Editorially",
     link: "https://editorially.org",
-    thumbnail: "/public/therdSection/third.webp",
+    thumbnail: "/therdSection/third.webp",
   },
   {
     title: "Moonbeam",
-    thumbnail: "/public/therdSection/first.png",
+    thumbnail: "/therdSection/first.png",
   },
   {
     title: "Cursor",
-    thumbnail: "/public/therdSection/second-backup.webp",
+    thumbnail: "/therdSection/second-backup.webp",
   },
   {
     title: "Rogue",
-    thumbnail: "/public/therdSection/fourth-backup.webp",
+    thumbnail: "/therdSection/fourth-backup.webp",
   },
 ];
 

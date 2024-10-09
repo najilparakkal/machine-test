@@ -1,19 +1,19 @@
 import React from 'react'
 
 const socialMediaPlatforms = [
-  { name: 'instagram', src: '/public/socialmedia/ff5ae72f423c7a1a2e6daf347ff1b5e2-removebg-preview.png' },
-  { name: 'tiktok', src: '/public/socialmedia/images-removebg-preview.png' },
-  { name: 'twitter', src: '/public/socialmedia/twitter.png' },
-  { name: 'facebook', src: '/public/socialmedia/pngimg.com_-_facebook_logos_PNG19753-removebg-preview.png' },
-  { name: 'meta', src: '/public/socialmedia/meta.png' },
-  { name: 'linkedin', src: '/public/socialmedia/linkedin.png' },
-  { name: 'slack', src: '/public/socialmedia/slack.png' },
-  { name: 'meta', src: '/public/socialmedia/meta.png' },
-  { name: 'linkedin', src: '/public/socialmedia/linkedin.png' },
-  { name: 'slack', src: '/public/socialmedia/slack.png' },
-  { name: 'instagram', src: '/public/socialmedia/ff5ae72f423c7a1a2e6daf347ff1b5e2-removebg-preview.png' },
-  { name: 'tiktok', src: '/public/socialmedia/images-removebg-preview.png' },
-  { name: 'twitter', src: '/public/socialmedia/twitter.png' },
+  { name: 'instagram', src: '/socialmedia/ff5ae72f423c7a1a2e6daf347ff1b5e2-removebg-preview.png' },
+  { name: 'tiktok', src: '/socialmedia/images-removebg-preview.png' },
+  { name: 'twitter', src: '/socialmedia/twitter.png' },
+  { name: 'facebook', src: '/socialmedia/pngimg.com_-_facebook_logos_PNG19753-removebg-preview.png' },
+  { name: 'meta', src: '/socialmedia/meta.png' },
+  { name: 'linkedin', src: '/socialmedia/linkedin.png' },
+  { name: 'slack', src: '/socialmedia/slack.png' },
+  { name: 'meta', src: '/socialmedia/meta.png' },
+  { name: 'linkedin', src: '/socialmedia/linkedin.png' },
+  { name: 'slack', src: '/socialmedia/slack.png' },
+  { name: 'instagram', src: '/socialmedia/ff5ae72f423c7a1a2e6daf347ff1b5e2-removebg-preview.png' },
+  { name: 'tiktok', src: '/socialmedia/images-removebg-preview.png' },
+  { name: 'twitter', src: '/socialmedia/twitter.png' },
 ]
 
 export default function SocialMediaComponent() {
