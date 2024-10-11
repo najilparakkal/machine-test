@@ -1,24 +1,27 @@
-import React from 'react'
-import NavBar from '../components/NavBar'
-import FirstSection from './FirstSection'
-import { HeroScrollDemo } from '../acertenityComponents/SecondSection'
-import ThirdSection from './ThirdSection'
-import ForthSection from './ForthSection'
-import FifthSection from './FifthSection'
+import React from "react";
+import NavBar from "../components/NavBar";
+import FirstSection from "./FirstSection";
+import { HeroScrollDemo } from "../acertenityComponents/SecondSection";
+import ThirdSection from "./ThirdSection";
+import ForthSection from "./ForthSection";
+import FifthSection from "./FifthSection";
+import SixthSection from "./SixthSection";
+import SeventhSection from "./SeventhSection";
 
 const Main = () => {
   return (
-    <div className="bg-black w-full h-screen">
-    <NavBar />
-    <FirstSection />
-    <HeroScrollDemo />
-   <ThirdSection/>
-        <ForthSection/>
-     <FifthSection/>
-    {/*   <SixthSection/>
-      <FooterSection/> */}
-  </div>
-  )
-}
+    <div className="bg-black w-full h-screen font-monstera">
+      <NavBar />
+      <FirstSection />
+      <HeroScrollDemo />
+      <ThirdSection />
+      <ForthSection />
+      <FifthSection />
+      <SixthSection />
+      <SeventhSection/>
+      {/*   <FooterSection/> */}
+    </div>
+  );
+};
 
-export default Main
+export default Main;

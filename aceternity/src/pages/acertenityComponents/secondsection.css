@@ -13,9 +13,9 @@
     bottom: -2px; 
     border-radius: 31px;
     border: 1px solid transparent;
-    background: linear-gradient(90deg, blue, transparent) 0 0 / 200% 200%;
+    background: linear-gradient(90deg, #00FFFF, transparent) 0 0 / 200% 200%;
     z-index: -1; 
-    animation: borderRun 7s linear infinite;
+    animation: borderRun 8s linear infinite;
   }
   
   @keyframes borderRun {

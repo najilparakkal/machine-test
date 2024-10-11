@@ -1,0 +1,31 @@
+.card-with-animated-border {
+    position: relative;
+    border-radius: 31px; 
+    z-index: 1;
+}
+
+.card-with-animated-border::before {
+    content: '';
+    position: absolute;
+    top: -2px; 
+    left: -2px; 
+    right: -2px; 
+    bottom: -2px; 
+    border-radius: 31px;
+    padding: 2px; 
+    background: linear-gradient(50deg, #00FFFF, transparent);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); 
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out; /* For Webkit browsers */
+    z-index: -1;
+    animation: borderRun 7s linear infinite;
+}
+
+@keyframes borderRun {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 200% 0%;
+    }
+}

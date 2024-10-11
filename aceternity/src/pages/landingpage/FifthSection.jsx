@@ -231,7 +231,7 @@ const FifthSection = () => {
                         className="w-12 h-12 rounded-full mb-4"
                       />
                       <div className="mb-4">
-                        <h2 className="text-lg text-gray-700 font-bold mb-1">
+                        <h2 className="text-lg text-gray-700  font-bold mb-1">
                           {card.title}
                         </h2>
                         <p className="text-gray-700 mt-[-3px]">
