@@ -109,11 +109,9 @@ const SeventhSection = () => {
         Trusted by big industries
       </h2>
   
-      {/* Gradient on the sides for slider */}
       <div className="absolute left-0 top-0 bottom-0 w-1/4 md:w-1/2 bg-gradient-to-r from-black to-transparent pointer-events-none z-20"></div>
       <div className="absolute right-0 top-0 bottom-0 w-1/4 md:w-1/2 bg-gradient-to-l from-black to-transparent pointer-events-none z-20"></div>
   
-      {/* Slider Section */}
       <div className="relative overflow-hidden">
         <Slider {...settings}>
           {logos.map((logo, index) => (
@@ -129,7 +127,7 @@ const SeventhSection = () => {
                 className={`w-full h-full object-contain transition-all duration-300 ${
                   hoveredLogo === logo.name ? "filter-none" : "filter grayscale"
                 }`}
-                style={{ width: "80px", height: "40px" }} // Adjusted size for responsiveness
+                style={{ width: "80px", height: "40px" }} 
               />
             </div>
           ))}
@@ -137,7 +135,6 @@ const SeventhSection = () => {
       </div>
     </div>
   
-    {/* FAQ Section */}
     <div className="h-full flex flex-col items-center justify-center p-4">
       <h2 className="text-white text-2xl md:text-4xl lg:text-5xl mt-16 md:mt-28 mb-16 md:mb-24 text-center">
         Frequently Asked Questions

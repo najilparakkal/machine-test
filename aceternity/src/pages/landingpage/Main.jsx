@@ -7,6 +7,7 @@ import ForthSection from "./ForthSection";
 import FifthSection from "./FifthSection";
 import SixthSection from "./SixthSection";
 import SeventhSection from "./SeventhSection";
+import LastSection from "./LastSection";
 
 const Main = () => {
   return (
@@ -19,6 +20,7 @@ const Main = () => {
       <FifthSection />
       <SixthSection />
       <SeventhSection/>
+      <LastSection/>
       {/*   <FooterSection/> */}
     </div>
   );
