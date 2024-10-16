@@ -54,7 +54,7 @@ export const HeroParallax = ({ products }) => {
         }}
         className=""
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-5 mb-20">
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-5 ">
           {firstRow.map((product) => (
             <ProductCard
               product={product}
@@ -63,7 +63,7 @@ export const HeroParallax = ({ products }) => {
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row  mb-20 space-x-5 ">
+        <motion.div className="flex flex-row space-x-5 ">
           {secondRow.map((product) => (
             <ProductCard
               product={product}
@@ -89,130 +89,118 @@ export const HeroParallax = ({ products }) => {
 export const Header = () => {
   return (
     <>
-      <div className="max-w-5xl relative mx-auto py-20 md:py-40 px-4 w-full -mt-72 left-0 top-0">
-        <div className=" space-y-16 md:space-y-24 font-bold w-full ">
-          <div className=" flex w-full gap-14">
-          <div className="gap-3">
-            <div className="flex items-center gap-4">
-              <MdOutlineForwardToInbox className="bg-black text-[#06B6D4] w-8 h-8 md:w-12 md:h-12 flex-shrink-0" />
-              <h1 className="text-lg md:text-5xl font-bold dark:text-white mb-4">
-                Email Automation
-              </h1>
+      <div className="max-w-5xl relative mx-auto py-20 md:py-40 px-4 w-full -mt-48 left-0 top-0">
+        <div className="space-y-16 md:space-y-24 font-bold w-full">
+          {/* First row */}
+          <div className="flex flex-col md:flex-row w-full gap-14">
+            <div className="gap-3">
+              <div className="flex items-center gap-4">
+                <MdOutlineForwardToInbox className="bg-black text-[#06B6D4] w-8 h-8 md:w-12 md:h-12 flex-shrink-0" />
+                <h1 className="text-lg md:text-5xl font-bold dark:text-white mb-4">
+                  Email Automation
+                </h1>
+              </div>
+              <p className="max-w-2xl text-sm md:text-xl mt-2 text-[#737373] font-bold mb-8">
+                With our best-in-class email automation, you can automate your
+                entire emailing process.
+              </p>
             </div>
-            <p className="max-w-2xl text-sm md:text-xl mt-2 text-[#737373] font-bold mb-8">
-              With our best-in-class email automation, you can automate your
-              entire emailing process.
-            </p>
+
+            <div className="gap-3">
+              <div className="flex gap-4">
+                <svg
+                  width="64"
+                  height="64"
+                  viewBox="0 0 64 64"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="bg-[#2B2B2B] rounded-lg"
+                >
+                  <rect width="64" height="64" rx="8" fill="black" />
+                  <g stroke="#06B6D4" strokeWidth="2">
+                    <circle cx="32" cy="32" r="6" />
+                    <circle cx="20" cy="44" r="3" />
+                    <circle cx="44" cy="44" r="3" />
+                    <circle cx="32" cy="20" r="3" />
+                    <line x1="27.17" y1="36.83" x2="22.83" y2="41.17" />
+                    <line x1="36.83" y1="36.83" x2="41.17" y2="41.17" />
+                    <path d="M32 26 L32 23" />
+                  </g>
+                </svg>
+                <h1 className="text-xl md:text-5xl font-bold dark:text-white mb-4">
+                  Cross Platform <br /> Marketing
+                </h1>
+              </div>
+              <p className="max-w-2xl text-base md:text-xl mt-2 text-[#737373] font-bold mb-8">
+                With our cross-platform marketing, you can reach your audience
+                on all the platforms they use.
+              </p>
+            </div>
           </div>
 
-          <div className="gap-3">
-            <div className="flex gap-4">
-              <svg
-                width="64"
-                height="64"
-                viewBox="0 0 64 64"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="bg-[#2B2B2B] rounded-lg"
-              >
-                <defs>
-                  <filter
-                    id="glow"
-                    x="-50%"
-                    y="-50%"
-                    width="200%"
-                    height="200%"
+          {/* Second row */}
+          <div className="flex flex-col md:flex-row w-full gap-14">
+            <div className="gap-3">
+              <div className="flex gap-4">
+                <svg
+                  width="64"
+                  height="64"
+                  viewBox="0 0 64 64"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="bg-black rounded-lg"
+                >
+                  <rect width="64" height="64" rx="8" fill="black" />
+                  <text
+                    x="16"
+                    y="40"
+                    fontSize="32"
+                    fontFamily="monospace"
+                    fill="#06B6D4"
                   >
-                    <feGaussianBlur stdDeviation="1.5" result="coloredBlur" />
-                    <feMerge>
-                      <feMergeNode in="coloredBlur" />
-                      <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                  </filter>
-                </defs>
-                <rect width="64" height="64" rx="8" fill="black" />
-                <g filter="url(#glow)" stroke="#06B6D4" strokeWidth="2">
-                  <circle cx="32" cy="32" r="6" />
-                  <circle cx="20" cy="44" r="3" />
-                  <circle cx="44" cy="44" r="3" />
-                  <circle cx="32" cy="20" r="3" />
-                  <line x1="27.17" y1="36.83" x2="22.83" y2="41.17" />
-                  <line x1="36.83" y1="36.83" x2="41.17" y2="41.17" />
-                  <path d="M32 26 L32 23" />
-                </g>
-              </svg>
-              <h1 className="text-xl md:text-5xl font-bold dark:text-white mb-4">
-                Cross Platform <br /> Marketing
-              </h1>
+                    &gt;_
+                  </text>
+                </svg>
+                <h1 className="text-xl md:text-5xl font-bold dark:text-white mb-4">
+                  Managed CRM
+                </h1>
+              </div>
+              <p className="max-w-2xl text-base md:text-xl mt-2 text-[#737373] font-bold mb-8">
+                With our managed CRM, you can manage your leads and contacts in
+                one place.
+              </p>
             </div>
-            <p className="max-w-2xl text-base md:text-xl mt-2 text-[#737373] font-bold mb-8">
-              With our cross-platform marketing, you can reach your audience on
-              all the platforms they use.
-            </p>
-          </div>
-          </div>
-          <div className=" flex w-full gap-14">
-          <div className="gap-3">
-            <div className="flex gap-4">
-              <svg
-                width="64"
-                height="64"
-                viewBox="0 0 64 64"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="bg-black rounded-lg"
-              >
-                <rect width="64" height="64" rx="8" fill="black" />
-                <text
-                  x="16"
-                  y="40"
-                  fontSize="32"
-                  fontFamily="monospace"
-                  fill="#06B6D4"
-                >
-                  &gt;_
-                </text>
-              </svg>
-              <h1 className="text-xl md:text-5xl font-bold dark:text-white mb-4">
-                Managed CRM
-              </h1>
-            </div>
-            <p className="max-w-2xl text-base md:text-xl mt-2 text-[#737373] font-bold mb-8">
-              With our managed CRM, you can manage your leads and contacts in
-              one place.
-            </p>
-          </div>
 
-          <div className="gap-3">
-            <div className="flex gap-4">
-              <svg
-                width="64"
-                height="64"
-                viewBox="0 0 64 64"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="bg-black rounded-lg"
-              >
-                <rect width="64" height="64" rx="8" fill="black" />
-                <text
-                  x="16"
-                  y="40"
-                  fontSize="32"
-                  fontFamily="monospace"
-                  fill="#06B6D4"
+            <div className="gap-3">
+              <div className="flex gap-4">
+                <svg
+                  width="64"
+                  height="64"
+                  viewBox="0 0 64 64"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="bg-black rounded-lg"
                 >
-                  &gt;_
-                </text>
-              </svg>
-              <h1 className="text-xl md:text-5xl font-bold dark:text-white mb-4">
-                Apps Automation
-              </h1>
+                  <rect width="64" height="64" rx="8" fill="black" />
+                  <text
+                    x="16"
+                    y="40"
+                    fontSize="32"
+                    fontFamily="monospace"
+                    fill="#06B6D4"
+                  >
+                    &gt;_
+                  </text>
+                </svg>
+                <h1 className="text-xl md:text-5xl font-bold dark:text-white mb-4">
+                  Apps Automation
+                </h1>
+              </div>
+              <p className="max-w-2xl text-base md:text-xl mt-2 text-[#737373] font-bold mb-8">
+                We have cloned Zapier and built our very own apps automation
+                platform.
+              </p>
             </div>
-            <p className="max-w-2xl text-base md:text-xl mt-2 text-[#737373] font-bold mb-8">
-              We have cloned Zapier and built our very own apps automation
-              platform.
-            </p>
-          </div>
           </div>
         </div>
       </div>
@@ -240,7 +228,6 @@ export const ProductCard = ({ product, translate }) => {
         alt={product.title}
       />
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
-      
     </motion.div>
   );
 };

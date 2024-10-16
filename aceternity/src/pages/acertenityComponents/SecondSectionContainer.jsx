@@ -1,8 +1,8 @@
 "use client";
 import React, { useRef, useState } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Ensure this is correctly imported
-import { faPlay } from "@fortawesome/free-solid-svg-icons"; // Ensure this is correctly imported
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
+import { faPlay } from "@fortawesome/free-solid-svg-icons"; 
 import "./secondsection.css";
 export const ContainerScroll = ({ titleComponent, children }) => {
   const containerRef = useRef(null);
@@ -36,12 +36,12 @@ export const ContainerScroll = ({ titleComponent, children }) => {
       ref={containerRef}
     >
       <div className="absolute inset-x-0 bottom-0 bg-black h-28 z-10" />
-      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black to-transparent  z-20 h-72" />
+      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black to-transparent mb-[670px] md:mb-96 z-20 h-96 " />
 
       <div
         className="py-20 md:py-60 w-full h-full relative "
         style={{
-          perspective: "1500px",
+          perspective: "1000px",
         }}
       >
         <Card
@@ -88,7 +88,7 @@ export const Card = ({ rotate, scale, children }) => {
         scale,
         boxShadow: "0 10px 20px rgba(0, 0, 0, 0.25)", 
       }}
-      className="relative max-w-6xl mx-auto md:h-[65rem] w-full  border-4 rounded-[30px] border-gray-900 bg-black  card-with-animated-border"
+      className="relative max-w-4xl mx-auto md:h-[45rem] h-[45rem]  w-full  border-4 rounded-[30px] border-gray-900 bg-black  card-with-animated-border"
     >
       <div className="w-full h-full bg-black rounded-[30px] p-6 ">
         <div className="h-full w-full overflow-hidden rounded-[30px] dark:bg-zinc-900 relative">

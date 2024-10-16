@@ -1,6 +1,7 @@
 import { Button, Rating } from "@mui/material";
 import { AnimatedTooltip } from "../acertenityComponents/AnimatedToolTip";
 import Footer from "../components/Footer";
+import WhyTrustUs from "../components/WhyTrustUs";
 
 export default function LastSection() {
   const items = [
@@ -49,60 +50,56 @@ export default function LastSection() {
   ];
   return (
     <div className="bg-black text-white min-h-screen items-center p-8 md:p-16">
-  <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-between">
-    {/* Left Section */}
-    <div className="max-w-3xl mb-10 lg:mb-0">
-      <h1 className="text-3xl font-bold md:text-4xl mb-6">
-        Get started today with Proactiv to <br /> kickstart your marketing
-        efforts
-      </h1>
-      <p className="text-[#A3A3A3] mb-10 text-sm md:text-base">
-        Proactiv houses the best in class software tools to <br /> kickstart
-        your marketing journey. Join 127,000+ other users <br /> to get
-        started.
-      </p>
+      <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-between">
+        <div className="max-w-3xl mb-10 lg:mb-0">
+          <h1 className="text-3xl font-bold md:text-4xl mb-6">
+            Get started today with Proactiv to <br /> kickstart your marketing
+            efforts
+          </h1>
+          <p className="text-[#A3A3A3] mb-10 text-sm md:text-base">
+            Proactiv houses the best in class software tools to <br /> kickstart
+            your marketing journey. Join 127,000+ other users <br /> to get
+            started.
+          </p>
 
-      <div className="flex flex-col md:flex-row gap-3 md:gap-6">
-        <AnimatedTooltip items={items} />
-        <Rating name="" value={5} readOnly className="mt-5 md:mt-0" />
+          <div className="flex flex-col md:flex-row gap-3 md:gap-6">
+            <AnimatedTooltip items={items} />
+            <Rating name="" value={5} readOnly className="mt-5 md:mt-0" />
+          </div>
+          <p className="text-xs md:text-sm font-semibold text-[#737373] mt-3">
+            Trusted by 27,000+ creators
+          </p>
+        </div>
+
+        <div className="lg:ml-8 flex justify-center lg:justify-end">
+          <button className="bg-[#34B1D9] mt-10 lg:mt-0 text-black font-semibold py-3 px-3 text-sm md:text-base rounded-lg w-40 transition-colors mx-auto flex items-center justify-center">
+            Book a demo
+            <span className="ml-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="w-5 h-5"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13 5l7 7m0 0l-7 7m7-7H6"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
       </div>
-      <p className="text-xs md:text-sm font-semibold text-[#737373] mt-3">
-        Trusted by 27,000+ creators
-      </p>
+
+      <div className="h-fit mt-16  flex justify-center items-center">
+        <WhyTrustUs />
+      </div>
+
+      {/* Footer */}
+      <Footer />
     </div>
-
-    {/* Right Section */}
-    <div className="lg:ml-8 flex justify-center lg:justify-end">
-      <button className="bg-[#34B1D9] mt-10 lg:mt-0 text-black font-semibold py-3 px-3 text-sm md:text-base rounded-lg w-40 transition-colors mx-auto flex items-center justify-center">
-        Book a demo
-        <span className="ml-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-            stroke="currentColor"
-            className="w-5 h-5"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M13 5l7 7m0 0l-7 7m7-7H6"
-            />
-          </svg>
-        </span>
-      </button>
-    </div>
-  </div>
-
-  {/* Example Second Section */}
-  <div className="h-screen bg-blue-600 flex justify-center items-center">
-    <h1 className="relative">Mac book</h1>
-  </div>
-
-  {/* Footer */}
-  <Footer />
-</div>
-
   );
 }

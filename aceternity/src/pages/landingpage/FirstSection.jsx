@@ -50,9 +50,10 @@ const FirstSection = () => {
   ];
   return (
     <div className="bg-black text-white min-h-screen w-full flex flex-col   border-b border-gray-800 items-center justify-center px-4 sm:px-8 md:px-16 lg:px-24">
-      <h1 className="md:text-4xl lg:text-8xl font-bold max-w-7xl mx-auto text-center mt-64 relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
-        Transform Your <br /> Marketing with Proactiv{" "}
-      </h1>
+    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-8xl font-bold max-w-7xl mx-auto text-center mt-32 sm:mt-48 md:mt-64 relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
+  Transform Your <br /> Marketing with Proactiv
+</h1>
+
 
       <p className="text-lg md:text-xl  w-1/2 font-semibold mt-4 md:mt-7 text-gray-200 mb-6 text-center">
         Automate Campaigns, Engage Audiences, and Boost Lead Generation with Our
