@@ -41,8 +41,8 @@ const NavBar = () => {
         >
           <div className="bg-white rounded-full">
             <svg
-              width="25"
-              height="25"
+              width="18"
+              height="18"
               viewBox="0 0 30 30"
               xmlns="http://www.w3.org/2000/svg"
               className="m-0.5"
@@ -87,7 +87,7 @@ const NavBar = () => {
           Register
         </a>
 
-        <button className="hidden md:block bg-[#34B1D9] text-black font-semibold py-2 px-6 text-[15px] rounded-lg w-36 hover:bg-gray-100 transition-colors">
+        <button className="hidden md:block bg-[#34B1D9] text-black font-semibold py-2 px-2 text-[13px] rounded-lg w-28 hover:bg-gray-100 transition-colors">
           Book a demo
         </button>
 

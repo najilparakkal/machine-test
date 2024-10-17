@@ -2,6 +2,7 @@ import React from "react";
 
 import { Rating, Typography } from "@mui/material";
 import { AnimatedTooltip } from "../acertenityComponents/AnimatedToolTip";
+import { Sparkles } from "../acertenityComponents/Tools";
 
 const FirstSection = () => {
   const items = [
@@ -49,11 +50,11 @@ const FirstSection = () => {
     },
   ];
   return (
-    <div className="bg-black text-white min-h-screen w-full flex flex-col   border-b border-gray-800 items-center justify-center px-4 sm:px-8 md:px-16 lg:px-24">
-    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-8xl font-bold max-w-7xl mx-auto text-center mt-32 sm:mt-48 md:mt-64 relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
-  Transform Your <br /> Marketing with Proactiv
-</h1>
-
+    <div className="bg-black text-white min-h-screen w-full flex flex-col    items-center justify-center px-4 sm:px-8 md:px-16 lg:px-24">
+      <Sparkles/>
+      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-8xl font-bold max-w-7xl mx-auto text-center mt-32 sm:mt-48 md:mt-64 relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
+        Transform Your <br /> Marketing with Proactiv
+      </h1>
 
       <p className="text-lg md:text-xl  w-1/2 font-semibold mt-4 md:mt-7 text-gray-200 mb-6 text-center">
         Automate Campaigns, Engage Audiences, and Boost Lead Generation with Our
@@ -69,9 +70,9 @@ const FirstSection = () => {
           <p className="text-xs md:text-sm font-semibold text-[#737373] mt-3">
             Trusted by 27,000+ creators
           </p>
-          <button className="bg-[#34B1D9] mt-20 text-black font-semibold py-3 px-6 text-[15px] rounded-lg w-48 hover:bg-gray-100 transition-colors mx-auto flex items-center justify-center">
+          <button className="bg-[#34B1D9] mt-20 text-black font-semibold py-3 px-2 text-[13px] rounded-lg w-36 hover:bg-gray-100 transition-colors mx-auto flex items-center justify-center">
             Book a demo
-            <span className="ml-2">
+            <span className="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

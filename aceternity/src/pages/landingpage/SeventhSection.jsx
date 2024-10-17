@@ -73,7 +73,7 @@ const SeventhSection = () => {
     dots: false, 
     infinite: true, 
     speed: 5000, 
-    slidesToShow: 6, 
+    slidesToShow: 8, 
     slidesToScroll: 1, 
     autoplay: true, 
     autoplaySpeed: 0, 
@@ -117,7 +117,7 @@ const SeventhSection = () => {
           {logos.map((logo, index) => (
             <div
               key={index}
-              className="flex-shrink-0 transition-all duration-300 ease-in-out p-2"
+              className="flex-shrink-0 transition-all  duration-300 ease-in-out p-2"
               onMouseEnter={() => setHoveredLogo(logo.name)}
               onMouseLeave={() => setHoveredLogo("")}
             >

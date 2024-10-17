@@ -174,7 +174,7 @@ const FifthSection = () => {
       </div>
   
       <div className="p-5 w-full flex relative shadow-2xl shadow-stone-950 z-20">
-        <div className="absolute inset-0 flex items-center h-full bg-gradient-to-b from-black to-transparent justify-center z-30">
+        <div className="absolute inset-0 flex items-center h-full bg-gradient-to-b from-[#000009] to-transparent justify-center z-30">
           <TestimonialSection />
         </div>
   
@@ -188,20 +188,20 @@ const FifthSection = () => {
                 <div className="relative z-10">
                   <div className="absolute inset-0 rounded-2xl shadow-lg bg-[#18181B] -z-10"></div>
                   <div className="bg-[#18181B] gap-4 border border-gray-800 rounded-2xl p-6 flex flex-col items-start w-full">
-                    <p className="text-gray-600 text-start">
+                    <p className="text-gray-400/50 text-start">
                       {card.description}
                     </p>
                     <div className="flex items-center gap-4">
                       <img
                         src={card.image}
                         alt={card.title}
-                        className="w-12 h-12 rounded-full mb-4"
+                        className="w-14 h-14 rounded-full mb-4 z-10"
                       />
                       <div className="mb-4">
-                        <h2 className="text-lg text-gray-700 font-bold mb-1">
+                        <h2 className="text-lg text-gray-400/50 font-bold mb-1">
                           {card.title}
                         </h2>
-                        <p className="text-gray-700 mt-[-3px]">
+                        <p className="text-gray-400/50 mt-[-3px]">
                           {card.userName}
                         </p>
                       </div>
@@ -221,20 +221,20 @@ const FifthSection = () => {
                 <div className="relative z-10">
                   <div className="absolute inset-0 rounded-2xl shadow-lg bg-[#18181B] -z-10"></div>
                   <div className="bg-[#18181B] border gap-4 border-gray-800 rounded-2xl p-6 flex flex-col items-start w-full">
-                    <p className="text-gray-700 text-start">
+                    <p className="text-gray-400/50 text-start">
                       {card.description}
                     </p>
                     <div className="flex items-center gap-4">
                       <img
                         src={card.image}
                         alt={card.title}
-                        className="w-12 h-12 rounded-full mb-4"
+                        className="w-14 h-14 rounded-full mb-4"
                       />
                       <div className="mb-4">
-                        <h2 className="text-lg text-gray-700  font-bold mb-1">
+                        <h2 className="text-lg text-gray-400/50  font-bold mb-1">
                           {card.title}
                         </h2>
-                        <p className="text-gray-700 mt-[-3px]">
+                        <p className="text-gray-400/50 mt-[-3px]">
                           {card.userName}
                         </p>
                       </div>
@@ -254,20 +254,20 @@ const FifthSection = () => {
                 <div className="relative z-10">
                   <div className="absolute inset-0 rounded-2xl gap-4 shadow-lg bg-[#18181B] -z-10"></div>
                   <div className="bg-[#18181B] border border-gray-800 rounded-2xl p-6 flex flex-col items-start w-full">
-                    <p className="text-gray-700 text-start">
+                    <p className="text-gray-400/50 text-start">
                       {card.description}
                     </p>
                     <div className="flex items-center gap-1">
                       <img
                         src={card.image}
                         alt={card.title}
-                        className="w-12 h-12 rounded-full mb-4"
+                        className="w-14 h-14 rounded-full mb-4"
                       />
                       <div className="mb-4">
-                        <h2 className="text-lg text-gray-700 font-bold mb-1">
+                        <h2 className="text-lg text-gray-400/50 font-bold mb-1">
                           {card.title}
                         </h2>
-                        <p className="text-gray-700 mt-[-3px]">
+                        <p className="text-gray-400/50 mt-[-3px]">
                           {card.userName}
                         </p>
                       </div>

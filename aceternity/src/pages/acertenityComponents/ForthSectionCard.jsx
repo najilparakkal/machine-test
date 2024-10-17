@@ -92,10 +92,10 @@ export const Header = () => {
       <div className="max-w-5xl relative mx-auto py-20 md:py-40 px-4 w-full -mt-48 left-0 top-0">
         <div className="space-y-16 md:space-y-24 font-bold w-full">
           {/* First row */}
-          <div className="flex flex-col md:flex-row w-full gap-14">
-            <div className="gap-3">
-              <div className="flex items-center gap-4">
-                <MdOutlineForwardToInbox className="bg-black text-[#06B6D4] w-8 h-8 md:w-12 md:h-12 flex-shrink-0" />
+          <div className="flex flex-col  md:flex-row w-full gap-14">
+          <div className="gap-3 z-10 rounded-lg p-4 backdrop-blur-sm bg-opacity-50 bg-gray-900/5">
+          <div className="flex items-center gap-4">
+                <MdOutlineForwardToInbox className=" text-[#06B6D4] w-8 h-8 md:w-12 md:h-12 flex-shrink-0" />
                 <h1 className="text-lg md:text-5xl font-bold dark:text-white mb-4">
                   Email Automation
                 </h1>
@@ -106,7 +106,7 @@ export const Header = () => {
               </p>
             </div>
 
-            <div className="gap-3">
+            <div className="gap-3 z-10 rounded-lg p-4 backdrop-blur-sm bg-opacity-50 bg-gray-900/5 ">
               <div className="flex gap-4">
                 <svg
                   width="64"
@@ -114,9 +114,9 @@ export const Header = () => {
                   viewBox="0 0 64 64"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="bg-[#2B2B2B] rounded-lg"
+                  className=" rounded-lg"
                 >
-                  <rect width="64" height="64" rx="8" fill="black" />
+                  <rect width="64" height="64" rx="8" fill="" />
                   <g stroke="#06B6D4" strokeWidth="2">
                     <circle cx="32" cy="32" r="6" />
                     <circle cx="20" cy="44" r="3" />
@@ -140,7 +140,7 @@ export const Header = () => {
 
           {/* Second row */}
           <div className="flex flex-col md:flex-row w-full gap-14">
-            <div className="gap-3">
+            <div className="gap-3 z-10 rounded-lg p-4 backdrop-blur-sm bg-opacity-50 bg-gray-900/5">
               <div className="flex gap-4">
                 <svg
                   width="64"
@@ -150,7 +150,7 @@ export const Header = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   className="bg-black rounded-lg"
                 >
-                  <rect width="64" height="64" rx="8" fill="black" />
+                  <rect width="64" height="64" rx="8" fill="" />
                   <text
                     x="16"
                     y="40"
@@ -171,7 +171,7 @@ export const Header = () => {
               </p>
             </div>
 
-            <div className="gap-3">
+            <div className="gap-3 z-10 rounded-lg p-4 backdrop-blur-sm bg-opacity-50 bg-gray-900/5">
               <div className="flex gap-4">
                 <svg
                   width="64"
@@ -192,7 +192,7 @@ export const Header = () => {
                     &gt;_
                   </text>
                 </svg>
-                <h1 className="text-xl md:text-5xl font-bold dark:text-white mb-4">
+                <h1 className="text-xl md:text-5xl -mt-3 font-bold dark:text-white mb-4">
                   Apps Automation
                 </h1>
               </div>

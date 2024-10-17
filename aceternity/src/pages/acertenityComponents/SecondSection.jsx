@@ -10,11 +10,9 @@ export const HeroScrollDemo = () => {
   return (
     <div className="flex flex-col h-fit overflow-hidden bg-black    ">
 
-      <ContainerScroll
-      
-      >
+      <ContainerScroll />
      
-      </ContainerScroll>
+      
     </div>
   );
 };

@@ -108,7 +108,7 @@ const Skeleton = () => {
   const random = () => Math.random();
   return (
     (<div className="absolute inset-0">
-      {[...Array(12)].map((_, i) => (
+      {[...Array(60)].map((_, i) => (
         <motion.span
           key={`star-${i}`}
           animate={{
@@ -131,7 +131,7 @@ const Skeleton = () => {
             borderRadius: "50%",
             zIndex: 1,
           }}
-          className="inline-block bg-black dark:bg-white"></motion.span>
+          className="inline-block bg-black dark:bg-gray-500"></motion.span>
       ))}
     </div>)
   );
