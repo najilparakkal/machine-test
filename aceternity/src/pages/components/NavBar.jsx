@@ -27,7 +27,7 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`fixed top-0 z-50 flex items-center justify-between px-6 py-4 h-16 rounded-xl shadow-md transition-all duration-500 ease ${
+      className={`fixed top-0 z-50 mt-2 flex items-center justify-between px-6 py-4 h-14 rounded-xl shadow-md transition-all duration-500 ease ${
         isScrolled
           ? "left-[5%] right-[5%] lg:left-[8.33%] lg:right-[8.33%] bg-[#171717]"
           : "left-0 right-0 bg-black"
@@ -91,7 +91,7 @@ const NavBar = () => {
           Register
         </a>
 
-        <button className="hidden md:block bg-[#34B1D9] text-black font-semibold py-2 px-2 text-[13px] rounded-lg w-28 hover:bg-gray-100 transition-colors">
+        <button className="hidden md:block bg-[#34B1D9] text-black font-semibold py-[8px] px-0 text-[13px] rounded-lg w-28 hover:bg-gray-100 transition-colors">
           Book a demo
         </button>
 
