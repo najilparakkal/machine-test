@@ -27,16 +27,16 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`fixed top-0 z-50 flex items-center justify-between px-6 py-4 h-16 mt-2 rounded-xl shadow-md
-    ${
-      isScrolled
-        ? "left-[5%] right-[5%] bg-[#171717] lg:left-[8.33%] lg:right-[8.33%] transition-[left,right,background-color,width] duration-500 ease"
-        : "left-0 right-0 bg-black transition-[left,right,background-color,width] duration-690 ease-linear"
-    }`}
+      className={`fixed top-0 z-50 flex items-center justify-between px-6 py-4 h-16 rounded-xl shadow-md transition-all duration-500 ease ${
+        isScrolled
+          ? "left-[5%] right-[5%] lg:left-[8.33%] lg:right-[8.33%] bg-[#171717]"
+          : "left-0 right-0 bg-black"
+      }`}
     >
       <div className="flex items-center space-x-11">
+        {/* Logo and Brand */}
         <div
-          className="flex items-center  space-x-3 hover:cursor-pointer"
+          className="flex items-center space-x-3 hover:cursor-pointer"
           onClick={() => navigate("/")}
         >
           <div className="bg-white rounded-full">
@@ -57,6 +57,8 @@ const NavBar = () => {
             Proactiv
           </span>
         </div>
+
+        {/* Menu Links for Medium and Larger Screens */}
         <div className="hidden md:flex items-start text-lg space-x-6 text-[#C9CACB]">
           <a href="#" className="hover:text-white transition-colors">
             Features
@@ -79,7 +81,9 @@ const NavBar = () => {
         </div>
       </div>
 
+      {/* Menu Button and Actions */}
       <div className="flex items-center space-x-4">
+        {/* Register and Demo for Medium and Larger Screens */}
         <a
           onClick={() => navigate("/login")}
           className="hidden md:block text-gray-400 text-base text-[15px] hover:text-white transition-colors py-2 px-6 rounded-lg hover:bg-[#34B1D9]"
@@ -91,9 +95,10 @@ const NavBar = () => {
           Book a demo
         </button>
 
+        {/* Mobile Menu Toggle Button */}
         <button
           aria-label="Toggle Menu"
-          className="md:hidden text-white"
+          className="block md:hidden text-white"
           onClick={toggleMenu}
         >
           {isMenuOpen ? (
@@ -104,6 +109,7 @@ const NavBar = () => {
         </button>
       </div>
 
+      {/* Mobile Menu (visible on small screens only) */}
       {isMenuOpen && (
         <div className="absolute top-14 left-0 right-0 bg-black border-t border-gray-800 text-white flex flex-col space-y-2 px-6 py-4 md:hidden">
           <a href="#" className="hover:text-gray-300 transition-colors">
@@ -112,16 +118,23 @@ const NavBar = () => {
           <a href="#" className="hover:text-gray-300 transition-colors">
             Pricing
           </a>
-          <a href="#" className="hover:text-gray-300 transition-colors">
+          <a
+            onClick={() => navigate("/blogs")}
+            className="hover:text-gray-300 transition-colors"
+          >
             Blog
           </a>
-          <a href="#" className="hover:text-gray-300 transition-colors">
+          <a
+            onClick={() => navigate("/contact")}
+            className="hover:text-gray-300 transition-colors"
+          >
             Contact
           </a>
 
           <button className="bg-white text-black font-semibold w-full py-2 text-sm rounded-lg hover:bg-gray-100 transition-colors">
             Book a demo
           </button>
+
           <div className="flex gap-4">
             <button
               aria-label="Twitter X"
