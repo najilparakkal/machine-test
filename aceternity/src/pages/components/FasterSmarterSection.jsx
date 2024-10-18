@@ -130,7 +130,7 @@ export default function Component() {
                   fill="freeze"
                 />
               </polyline>
-                <div className="rounded-full shadow-2xl w-20 h-20 bg-red-500 shadow-[#06B6D4]"/>
+              <div className="rounded-full shadow-2xl w-20 h-20 bg-red-500 shadow-[#06B6D4]" />
 
               <circle
                 cx="110"
@@ -215,81 +215,61 @@ export default function Component() {
           </div>
 
           {/* Alerts & Notifications Card */}
-          <div className="border border-gray-800 p-4 sm:p-6 rounded-xl shadow-lg w-full max-w-full">
-            <h2 className="text-lg sm:text-xl font-semibold text-white">
+          <div className="border border-gray-800 p-2 sm:p-4 rounded-xl shadow-lg w-full max-w-full">
+            <h2 className="text-sm sm:text-lg font-semibold text-white">
               Alerts & Notifications
             </h2>
-            <p className="text-gray-400 mb-3 text-xs sm:text-sm">
+            <p className="text-gray-400 mb-2 sm:mb-3 text-xs sm:text-sm">
               Receive real-time notifications as soon as any downtime or
               performance degradation is detected.
             </p>
-            <div className="relative bg-gradient-to-bl from-black to-transparent -mt-4 p-4 rounded-lg overflow-hidden h-40 sm:h-48">
+            <div className="relative bg-gradient-to-bl from-black to-transparent -mt-2 sm:-mt-4 p-3 sm:p-4 rounded-lg overflow-hidden h-32 sm:h-40">
               <div
-                className="bg-gray-600 h-12 w-12 p-[1px] rounded-lg absolute top-1/2 left-1/2 z-10"
+                className="bg-gray-600 h-8 sm:h-12 w-8 sm:w-12 p-[1px] rounded-lg absolute top-1/2 left-1/2 z-10"
                 style={{
                   transform: `rotate(40deg)`,
                   animation: `3s ease-in-out infinite alternate`,
                 }}
               >
                 <Command
-                  className="text-white p-[10px] h-[48px] w-[48px] rounded-lg bg-gradient-to-t from-gray-800 to-black"
-                  size={40}
+                  className="text-white p-[8px] sm:p-[10px] h-[36px] sm:h-[48px] w-[36px] sm:w-[48px] rounded-lg bg-gradient-to-t from-gray-800 to-black"
+                  size={30} // Reduced icon size for smaller screens
                 />
               </div>
 
               <div
-                className="bg-gray-700 h-[1px] ml-44 w-full"
+                className="bg-gray-700 h-[1px] ml-32 sm:ml-44 w-full"
                 style={{
                   transform: `translate(-50%, -50%) rotate(40deg)`,
                   animation: `3s ease-in-out infinite alternate`,
                 }}
               />
               <div
-                className="bg-gradient-to-r from-gray-700 to-transparent h-[1px] mt-8 ml-36 w-full"
+                className="bg-gradient-to-r from-gray-700 to-transparent h-[1px] mt-6 sm:mt-8 ml-28 sm:ml-36 w-full"
                 style={{
                   transform: `translate(-50%, -50%) rotate(130deg)`,
                   animation: `3s ease-in-out infinite alternate`,
                 }}
               />
               <div
-                className="bg-gradient-to-r from-gray-700 to-transparent h-[1px] mt-12 ml-36 w-full"
+                className="bg-gradient-to-r from-gray-700 to-transparent h-[1px] mt-8 sm:mt-12 ml-28 sm:ml-36 w-full"
                 style={{
                   transform: `translate(-50%, -50%) rotate(130deg)`,
                   animation: `3s ease-in-out infinite alternate`,
                 }}
               />
               <div
-                className="bg-gradient-to-bl from-gray-700 to-transparent h-[1px] mt-12 ml-36 w-full"
+                className="bg-gradient-to-bl from-gray-700 to-transparent h-[1px] mt-8 sm:mt-12 ml-28 sm:ml-36 w-full"
                 style={{
                   transform: `translate(-50%, -50%) rotate(130deg)`,
                   animation: `3s ease-in-out infinite alternate`,
                 }}
               />
-              <div
-                className="bg-gradient-to-bl from-gray-700 to-transparent h-[1px] mt-12 ml-36 w-full"
-                style={{
-                  transform: `translate(-50%, -50%) rotate(130deg)`,
-                  animation: `3s ease-in-out infinite alternate`,
-                }}
-              />
-              <div
-                className="bg-gradient-to-bl from-gray-700 to-transparent h-[1px] mt-12 ml-36 w-full"
-                style={{
-                  transform: `translate(-50%, -50%) rotate(130deg)`,
-                  animation: `3s ease-in-out infinite alternate`,
-                }}
-              />
-              <div
-                className="bg-gradient-to-bl from-gray-700 to-transparent h-[1px] mt-12 ml-36 w-full"
-                style={{
-                  transform: `translate(-50%, -50%) rotate(130deg)`,
-                  animation: `3s ease-in-out infinite alternate`,
-                }}
-              />
+
               {labels.map((label, index) => (
                 <div
                   key={label.text}
-                  className={`absolute px-2 py-1 rounded-full text-xs text-white whitespace-nowrap ${
+                  className={`absolute px-1 sm:px-2 py-[1px] sm:py-1 rounded-full text-[8px] sm:text-xs text-white whitespace-nowrap ${
                     index % 2 === 0
                       ? "bg-blue-600"
                       : "bg-blue-900/50 backdrop-blur-sm"
@@ -307,6 +287,7 @@ export default function Component() {
                 </div>
               ))}
             </div>
+
             <style jsx>{`
               @keyframes floatIcon {
                 0% {
