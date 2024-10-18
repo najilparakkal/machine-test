@@ -112,10 +112,10 @@ const NavBar = () => {
       {/* Mobile Menu (visible on small screens only) */}
       {isMenuOpen && (
         <div className="absolute top-14 left-0 right-0 bg-black border-t border-gray-800 text-white flex flex-col space-y-2 px-6 py-4 md:hidden">
-          <a href="#" className="hover:text-gray-300 transition-colors">
+          <a onClick={() => navigate("/features")} className="hover:text-gray-300 transition-colors">
             Features
           </a>
-          <a href="#" className="hover:text-gray-300 transition-colors">
+          <a onClick={() => navigate("/pricing")} className="hover:text-gray-300 transition-colors">
             Pricing
           </a>
           <a
