@@ -2,12 +2,12 @@ import React from "react";
 import NavBar from "../components/NavBar";
 import FirstSection from "./FirstSection";
 import { HeroScrollDemo } from "../acertenityComponents/SecondSection";
-import ThirdSection from "./ThirdSection";
+import ThirdSection from "../components/FasterSmarterSection";
 import ForthSection from "./ForthSection";
-import FifthSection from "./FifthSection";
-import SixthSection from "./SixthSection";
+import FifthSection from "../components/EnterprenurSection";
+import Pricing from "../components/Pricing";
 import SeventhSection from "./SeventhSection";
-import LastSection from "./LastSection";
+import LastSection from "../components/LastSection";
 
 const Main = () => {
   return (
@@ -18,7 +18,7 @@ const Main = () => {
       <ThirdSection />
       <ForthSection />
       <FifthSection />
-      <SixthSection />
+      <Pricing />
       <SeventhSection/>
       <LastSection/>
       {/*   <FooterSection/> */}

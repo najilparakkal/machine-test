@@ -60,7 +60,7 @@ const Blog = () => {
       <NavBar />
       <div className="max-w-7xl mx-auto ">
         <div className="text-center mb-16 mt-32">
-          <div className="inline-block p-1 h-14 w-14 bg-gray-800 rounded-lg mb-4">
+          <div className="inline-block p-1 h-14 w-14 bg-gray-800 rounded-lg mb-4 shadow-2xl shadow-[#06B6D4]">
             <ClipboardIcon />
           </div>
           <h1 className="text-5xl font-semibold text-white mb-4">Blog</h1>

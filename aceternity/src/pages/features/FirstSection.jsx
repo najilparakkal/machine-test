@@ -1,12 +1,13 @@
 import React from "react";
-import { HeroParallax } from "../acertenityComponents/ForthSectionCard";
 import { TbTool } from "react-icons/tb";
+import { HeroParallax } from "../acertenityComponents/ForthSectionCard";
+import SecondSection from "../components/FasterSmarterSection";
 
-const ForthSection = () => {
+const FirstSection = () => {
   return (
     <div className="bg-black w-full">
-      <div className="h-[300px] flex justify-center items-center bg-black shadow-2xl">
-        <div className="flex flex-col items-center p-4 rounded mt-24">
+      <div className="h-[300px] flex justify-center items-end  shadow-2xl">
+        <div className="flex flex-col items-center p-4 rounded">
           <div className="p-1 bg-[#222222] mb-4 rounded-md hover:shadow-lg transition-all duration-1000 transform hover:scale-95">
             <div className="p-3 bg-black rounded-md shadow-2xl shadow-[#06B6D4]">
               <TbTool className="text-[#06B6D4] h-6 w-6 transform transition-transform duration-300 hover:scale-125" />
@@ -22,6 +23,9 @@ const ForthSection = () => {
         </div>
       </div>
       <HeroParallax products={products} />;
+      <div className=" md:mt-[200px]">
+        <SecondSection />
+      </div>
     </div>
   );
 };
@@ -76,4 +80,4 @@ export const products = [
   },
 ];
 
-export default ForthSection;
+export default FirstSection;

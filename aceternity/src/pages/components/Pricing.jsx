@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Check } from "lucide-react";
 import { HiClipboardList } from "react-icons/hi";
 
-const SixthSection = () => {
+const Pricing = () => {
   const [isYearly, setIsYearly] = useState(false);
 
   // Monthly and Yearly price details
@@ -131,15 +131,18 @@ const SixthSection = () => {
     },
   ];
 
-  // Toggle between monthly and yearly tiers based on the switch state
   const tiers = isYearly ? yearlyTiers : monthlyTiers;
 
   return (
     <div className="bg-black min-h-screen">
       <div className="h-[500px] flex flex-col items-center justify-center text-white p-4">
         <div className="inline-block mb-8 p-[4px] bg-[#2B2B2B] rounded-lg">
-          <HiClipboardList className="bg-black text-[#06B6D4] p-3 w-8 h-8 md:w-12 md:h-12 flex-shrink-0" />
+        <div className="p-1 bg-black rounded-md shadow-2xl shadow-[#06B6D4]">
+
+          <HiClipboardList className="bg-black text-[#06B6D4] p-3 w-12 h-12 md:w-13 md:h-13 flex-shrink-0" />
         </div>
+        </div>
+
         <h1 className="text-5xl font-bold mb-4 text-center">Simple pricing</h1>
         <p className="text-xl text-gray-400 mb-8 text-center max-w-2xl">
           Simple pricing for startups, small businesses, medium scale
@@ -221,4 +224,4 @@ const SixthSection = () => {
   );
 };
 
-export default React.memo(SixthSection);
+export default React.memo(Pricing);

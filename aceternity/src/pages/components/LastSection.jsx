@@ -1,7 +1,7 @@
 import { Button, Rating } from "@mui/material";
 import { AnimatedTooltip } from "../acertenityComponents/AnimatedToolTip";
-import Footer from "../components/Footer";
-import WhyTrustUs from "../components/WhyTrustUs";
+import Footer from "./Footer";
+import WhyTrustUs from "./WhyTrustUs";
 
 export default function LastSection() {
   const items = [
@@ -50,10 +50,10 @@ export default function LastSection() {
   ];
   return (
     <div className="bg-black text-white min-h-screen items-center p-8 md:p-16">
-      <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-between">
-        <div className="max-w-3xl mb-10 lg:mb-0">
-          <h1 className="text-3xl font-bold md:text-4xl mb-6">
-            Get started today with Proactiv to <br /> kickstart your marketing
+      <div className="w-full  max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-between">
+        <div className="max-w-2xl mb-10  ">
+          <h1 className="text-2xl font-bold md:text-4xl mb-6   mx-auto text-start relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
+            Get started today with Proactiv to  kickstart your marketing
             efforts
           </h1>
           <p className="text-[#A3A3A3] mb-10 text-sm md:text-base">
@@ -94,11 +94,9 @@ export default function LastSection() {
         </div>
       </div>
 
-      <div className="h-fit mt-16  flex justify-center items-center">
+      <div className="h-fit   flex justify-center items-center">
         <WhyTrustUs />
       </div>
-
-      {/* Footer */}
       <Footer />
     </div>
   );

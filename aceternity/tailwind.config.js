@@ -30,12 +30,19 @@ export default {
           '50%': { transform: 'scale(1)', opacity: 1 },
           '100%': { transform: 'scale(1.5)', opacity: 0 }, // Scales and fades out
         },
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
       },
       animation: {
         slideInFromLeft: 'slideInFromLeft 1s ease-out forwards',
         'warp-speed': 'warpSpeed 5s linear infinite',
         move: "move 5s linear infinite",
         loopCircle: 'loopCircle 3s ease-in-out infinite',
+        scroll:
+        "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
       backgroundSize: {
         '300%': '300% 300%',
@@ -51,6 +58,17 @@ function addVariablesForColors({ addBase, theme }) {
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
 
+  addBase({
+    ":root": newVars,
+  });
+}
+
+function addVariablesForColors({ addBase, theme }) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+ 
   addBase({
     ":root": newVars,
   });

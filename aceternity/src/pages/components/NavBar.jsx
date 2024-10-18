@@ -60,10 +60,10 @@ const NavBar = () => {
 
         {/* Menu Links for Medium and Larger Screens */}
         <div className="hidden md:flex items-start text-lg space-x-6 text-[#C9CACB]">
-          <a href="#" className="hover:text-white transition-colors">
+          <a  onClick={() => navigate("/features")} className="hover:text-white transition-colors">
             Features
           </a>
-          <a href="#" className="hover:text-white transition-colors">
+          <a onClick={()=>navigate("/pricing")} className="hover:text-white transition-colors">
             Pricing
           </a>
           <a

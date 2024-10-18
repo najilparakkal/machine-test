@@ -2,19 +2,19 @@ import React from "react";
 
 const WhyTrustUs = () => {
   return (
-    <div className="text-white py-16 px-4 sm:px-6 lg:px-8">
+    <div className=" px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4">
-          Why trust us?
-        </h2>
-        <p className="text-center text-gray-400 mb-16 max-w-3xl mx-auto">
+        <h1 className="text-4xl sm:text-5xl font-bold max-w-7xl mx-auto text-center relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
+        Why trust us?
+      </h1>
+        <p className="text-center text-[#A3A3A3] mb-16 max-w-3xl mx-auto">
           In today's fast-paced digital landscape, ensuring reliable uptime is
           more important than ever. Many monitoring services fall short, but we
           provide an industry-leading solution to keep your systems online and
           performing optimally.
         </p>
 
-        <div className="space-y-16">
+        <div className="space-y-16 text-[#A3A3A3]">
           <Section
             title="API Integration"
             items={[
@@ -35,7 +35,7 @@ const WhyTrustUs = () => {
               },
             ]}
           />
-
+          <div className="bg-gradient-to-r from-gray-500 to-black mt-8 w-full h-[1px]" />
           <Section
             title="System Management"
             items={[
@@ -56,7 +56,7 @@ const WhyTrustUs = () => {
               },
             ]}
           />
-
+          <div className="bg-gradient-to-r from-gray-500 to-black mt-8 w-full h-[1px]" />
           <Section
             title="Advanced Security"
             items={[
@@ -94,7 +94,6 @@ const Section = ({ title, items }) => (
         </div>
       ))}
     </div>
-    <div className="bg-gradient-to-r from-gray-500 to-black mt-8 w-full h-[1px]" />
   </div>
 );
 

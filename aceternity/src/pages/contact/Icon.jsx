@@ -8,7 +8,7 @@ const EnvelopeIcon = () => {
       viewBox="0 0 64 64"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="bg-[#2B2B2B]  rounded-lg "
+      className="bg-[#1F2937]  rounded-lg shadow-2xl shadow-[#06B6D4] "
     >
       <defs >
         <filter id="glow" x="-50%" y="-50%" width="200%" height="200%" >

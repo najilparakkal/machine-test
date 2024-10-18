@@ -2,6 +2,7 @@
 import React from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { MdOutlineForwardToInbox } from "react-icons/md";
+import { TbFidgetSpinner } from "react-icons/tb";
 
 export const HeroParallax = ({ products }) => {
   const firstRow = products.slice(0, 5);
@@ -13,7 +14,7 @@ export const HeroParallax = ({ products }) => {
     offset: ["start start", "end start"],
   });
 
-  const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
+  const springConfig = { stiffness: 300, damping: 60, bounce: 100 };
 
   const translateX = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, 1000]),
@@ -42,7 +43,7 @@ export const HeroParallax = ({ products }) => {
   return (
     <div
       ref={ref}
-      className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[300vh]  py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:600px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -89,59 +90,45 @@ export const HeroParallax = ({ products }) => {
 export const Header = () => {
   return (
     <>
-      <div className="max-w-5xl relative mx-auto py-20 md:py-40 px-4 w-full -mt-48 left-0 top-0">
+      <div className="max-w-5xl relative mx-auto py-20 md:py-40 px-4 w-full -mt-48">
         <div className="space-y-16 md:space-y-24 font-bold w-full">
-          {/* First row */}
-          <div className="flex flex-col  md:flex-row w-full gap-14">
-          <div className="gap-3 z-10 rounded-lg p-4 backdrop-blur-sm bg-opacity-50 bg-gray-900/5">
-          <div className="flex items-center gap-4">
-                <MdOutlineForwardToInbox className=" text-[#06B6D4] w-8 h-8 md:w-12 md:h-12 flex-shrink-0" />
-                <h1 className="text-lg md:text-5xl font-bold dark:text-white mb-4">
+          <div className="flex flex-col md:flex-row w-full gap-14">
+            {/* First Card */}
+            <div className="flex-1 gap-3 z-10 rounded-lg p-4 backdrop-blur-sm bg-opacity-50 bg-gray-900/5 flex flex-col items-center h-60">
+              <div className="flex flex-col items-center justify-center h-full">
+                <MdOutlineForwardToInbox className="text-[#06B6D4] w-16 h-16 flex-shrink-0 bg-black rounded-lg p-2" />{" "}
+                {/* Icon with black background */}
+                <h1 className="text-lg md:text-4xl font-bold dark:text-white mb-2 text-center">
                   Email Automation
                 </h1>
+                <p className="max-w-2xl text-sm md:text-xl mt-2 text-[#737373] font-bold mb-8 text-center">
+                  With our best-in-class email automation, you can automate your
+                  entire emailing process.
+                </p>
               </div>
-              <p className="max-w-2xl text-sm md:text-xl mt-2 text-[#737373] font-bold mb-8">
-                With our best-in-class email automation, you can automate your
-                entire emailing process.
-              </p>
             </div>
 
-            <div className="gap-3 z-10 rounded-lg p-4 backdrop-blur-sm bg-opacity-50 bg-gray-900/5 ">
-              <div className="flex gap-4">
-                <svg
-                  width="64"
-                  height="64"
-                  viewBox="0 0 64 64"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className=" rounded-lg"
-                >
-                  <rect width="64" height="64" rx="8" fill="" />
-                  <g stroke="#06B6D4" strokeWidth="2">
-                    <circle cx="32" cy="32" r="6" />
-                    <circle cx="20" cy="44" r="3" />
-                    <circle cx="44" cy="44" r="3" />
-                    <circle cx="32" cy="20" r="3" />
-                    <line x1="27.17" y1="36.83" x2="22.83" y2="41.17" />
-                    <line x1="36.83" y1="36.83" x2="41.17" y2="41.17" />
-                    <path d="M32 26 L32 23" />
-                  </g>
-                </svg>
-                <h1 className="text-xl md:text-5xl font-bold dark:text-white mb-4">
-                  Cross Platform <br /> Marketing
+            {/* Second Card */}
+            <div className="flex-1 gap-3 z-10 rounded-lg p-4 backdrop-blur-sm bg-opacity-50 bg-gray-900/5 flex flex-col items-center h-60">
+              <div className="flex flex-col items-center justify-center h-full">
+              <TbFidgetSpinner className="text-[#06B6D4] w-16 h-16 flex-shrink-0 bg-black rounded-lg p-2" />{" "}
+
+                <h1 className="text-lg md:text-4xl font-bold dark:text-white mb-2  text-center">
+                  Cross Platform Marketing
                 </h1>
+                <p className="max-w-2xl text-sm md:text-xl mt-2 text-[#737373] font-bold mb-8 text-center">
+                  With our cross-platform marketing, you can reach your audience
+                  on all the platforms use.
+                </p>
               </div>
-              <p className="max-w-2xl text-base md:text-xl mt-2 text-[#737373] font-bold mb-8">
-                With our cross-platform marketing, you can reach your audience
-                on all the platforms they use.
-              </p>
             </div>
           </div>
 
-          {/* Second row */}
+          {/* Second Row */}
           <div className="flex flex-col md:flex-row w-full gap-14">
-            <div className="gap-3 z-10 rounded-lg p-4 backdrop-blur-sm bg-opacity-50 bg-gray-900/5">
-              <div className="flex gap-4">
+            {/* Third Card */}
+            <div className="flex-1 gap-3 z-10 rounded-lg p-4 backdrop-blur-sm bg-opacity-50 bg-gray-900/5 flex flex-col items-center h-60">
+              <div className="flex flex-col items-center justify-center h-full">
                 <svg
                   width="64"
                   height="64"
@@ -150,7 +137,8 @@ export const Header = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   className="bg-black rounded-lg"
                 >
-                  <rect width="64" height="64" rx="8" fill="" />
+                  <rect width="64" height="64" rx="8" fill="black" />{" "}
+                  {/* Added black background */}
                   <text
                     x="16"
                     y="40"
@@ -161,18 +149,19 @@ export const Header = () => {
                     &gt;_
                   </text>
                 </svg>
-                <h1 className="text-xl md:text-5xl font-bold dark:text-white mb-4">
+                <h1 className="text-lg md:text-4xl font-bold dark:text-white mb-2 text-center">
                   Managed CRM
                 </h1>
+                <p className="max-w-2xl text-sm md:text-xl mt-2 text-[#737373] font-bold mb-8 text-center">
+                  With our managed CRM, you can manage your leads and contacts
+                  in one place.
+                </p>
               </div>
-              <p className="max-w-2xl text-base md:text-xl mt-2 text-[#737373] font-bold mb-8">
-                With our managed CRM, you can manage your leads and contacts in
-                one place.
-              </p>
             </div>
 
-            <div className="gap-3 z-10 rounded-lg p-4 backdrop-blur-sm bg-opacity-50 bg-gray-900/5">
-              <div className="flex gap-4">
+            {/* Fourth Card */}
+            <div className="flex-1 gap-3 z-10 rounded-lg p-4 backdrop-blur-sm bg-opacity-50 bg-gray-900/5 flex flex-col items-center h-60">
+              <div className="flex flex-col items-center justify-center h-full">
                 <svg
                   width="64"
                   height="64"
@@ -181,7 +170,8 @@ export const Header = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   className="bg-black rounded-lg"
                 >
-                  <rect width="64" height="64" rx="8" fill="black" />
+                  <rect width="64" height="64" rx="8" fill="black" />{" "}
+                  {/* Added black background */}
                   <text
                     x="16"
                     y="40"
@@ -192,14 +182,14 @@ export const Header = () => {
                     &gt;_
                   </text>
                 </svg>
-                <h1 className="text-xl md:text-5xl -mt-3 font-bold dark:text-white mb-4">
+                <h1 className="text-lg md:text-4xl font-bold dark:text-white mb-2 text-center">
                   Apps Automation
                 </h1>
+                <p className="max-w-2xl text-sm md:text-xl mt-2 text-[#737373] font-bold mb-8 text-center">
+                  We have cloned Zapier and built our very own apps automation
+                  platform.
+                </p>
               </div>
-              <p className="max-w-2xl text-base md:text-xl mt-2 text-[#737373] font-bold mb-8">
-                We have cloned Zapier and built our very own apps automation
-                platform.
-              </p>
             </div>
           </div>
         </div>

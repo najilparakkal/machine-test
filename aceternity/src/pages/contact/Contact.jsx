@@ -8,10 +8,10 @@ const Contact = () => {
     <div className="bg-black font-monstera">
       <NavBar />
       <div className="bg-black text-gray-300 min-h-screen flex items-center justify-center p-2 relative overflow-hidden">
-        <div className="w-full max-w-7xl mt-56 mb-32 rounded-lg overflow-hidden">
-          <div className="flex flex-col md:flex-row h-auto md:h-[700px]">
+        <div className="w-full max-w-7xl mt-32  rounded-lg overflow-hidden">
+          <div className="flex flex-col md:flex-row h-auto md:h-[600px]">
             <div className="md:w-1/2 p-8">
-              <div className="w-fit p-1 rounded-lg">
+              <div className="w-fit p-[1px] rounded-lg ">
                 <EnvelopeIcon />
               </div>
               <h2 className="text-[55px] font-semibold text-white mb-4">
