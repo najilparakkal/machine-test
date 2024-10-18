@@ -46,150 +46,150 @@ export default function Component() {
       </div>
 
       <div className="w-full max-w-7xl space-y-8">
-        <div className="p-2 sm:p-4 border border-gray-800 rounded-xl shadow-lg">
-          <h2 className="text-base sm:text-lg font-semibold mb-2">
-            Optimized for performance
-          </h2>
-          <p className="text-gray-400 mb-3 text-xs sm:text-sm">
-            Optimize your system's uptime and user experience. Our monitoring
-            platform helps you catch issues before they affect your users,
-            offering detailed metrics and real-time alerts.
-          </p>
+      <div className="p-1 sm:p-2 md:p-4 border border-gray-800 rounded-xl shadow-lg">
+  <h2 className="text-sm sm:text-base md:text-lg font-semibold mb-2">
+    Optimized for performance
+  </h2>
+  <p className="text-gray-400 mb-3 text-xs sm:text-sm md:text-base">
+    Optimize your system's uptime and user experience. Our monitoring
+    platform helps you catch issues before they affect your users,
+    offering detailed metrics and real-time alerts.
+  </p>
 
-          <div className="relative p-2 sm:p-4 rounded-lg overflow-hidden h-48 md:h-80 sm:h-64">
-            <svg
-              className="w-full h-full"
-              viewBox="0 0 400 100"
-              preserveAspectRatio="none"
-            >
-              <defs>
-                <pattern
-                  id="grid"
-                  width="20"
-                  height="20"
-                  patternUnits="userSpaceOnUse"
-                >
-                  <path
-                    d="M 20 0 L 0 0 0 20"
-                    fill="none"
-                    stroke="rgba(255,255,255,0.1)"
-                    strokeWidth="0.5"
-                  />
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#grid)" />
+  <div className="relative p-1 sm:p-2 md:p-4 rounded-lg overflow-hidden h-32 sm:h-48 md:h-64 lg:h-80">
+    <svg
+      className="w-full h-full"
+      viewBox="0 0 400 100"
+      preserveAspectRatio="none"
+    >
+      <defs>
+        <pattern
+          id="grid"
+          width="20"
+          height="20"
+          patternUnits="userSpaceOnUse"
+        >
+          <path
+            d="M 20 0 L 0 0 0 20"
+            fill="none"
+            stroke="rgba(255,255,255,0.1)"
+            strokeWidth="0.5"
+          />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid)" />
 
-              <line
-                x1="0"
-                y1="25"
-                x2="400"
-                y2="25"
-                stroke="#1C2937"
-                strokeWidth="0.5"
-              />
-              <line
-                x1="0"
-                y1="50"
-                x2="400"
-                y2="50"
-                stroke="#1C2937"
-                strokeWidth="0.5"
-              />
-              <line
-                x1="0"
-                y1="75"
-                x2="400"
-                y2="75"
-                stroke="#1C2937"
-                strokeWidth="0.5"
-              />
+      <line
+        x1="0"
+        y1="25"
+        x2="400"
+        y2="25"
+        stroke="#1C2937"
+        strokeWidth="0.5"
+      />
+      <line
+        x1="0"
+        y1="50"
+        x2="400"
+        y2="50"
+        stroke="#1C2937"
+        strokeWidth="0.5"
+      />
+      <line
+        x1="0"
+        y1="75"
+        x2="400"
+        y2="75"
+        stroke="#1C2937"
+        strokeWidth="0.5"
+      />
 
-              {Array.from({ length: 7 }).map((_, i) => (
-                <line
-                  key={i}
-                  x1={i * 50}
-                  y1="0"
-                  x2={i * 50}
-                  y2="100"
-                  stroke="#1C2937"
-                  strokeWidth="0.5"
-                />
-              ))}
+      {Array.from({ length: 7 }).map((_, i) => (
+        <line
+          key={i}
+          x1={i * 50}
+          y1="0"
+          x2={i * 50}
+          y2="100"
+          stroke="#1C2937"
+          strokeWidth="0.5"
+        />
+      ))}
 
-              <polyline
-                fill="none"
-                stroke="#4294E6"
-                strokeWidth="0.5"
-                points="0,80 40,60 80,90 110,50 150,60 180,20 220,70 250,50 280,90 360,10 400,50"
-              >
-                <animate
-                  attributeName="stroke-dasharray"
-                  from="0,400"
-                  to="400,0"
-                  dur="2s"
-                  fill="freeze"
-                />
-              </polyline>
-              <div className="rounded-full shadow-2xl w-20 h-20 bg-red-500 shadow-[#06B6D4]" />
+      <polyline
+        fill="none"
+        stroke="#4294E6"
+        strokeWidth="0.5"
+        points="0,80 40,60 80,90 110,50 150,60 180,20 220,70 250,50 280,90 360,10 400,50"
+      >
+        <animate
+          attributeName="stroke-dasharray"
+          from="0,400"
+          to="400,0"
+          dur="2s"
+          fill="freeze"
+        />
+      </polyline>
 
-              <circle
-                cx="110"
-                cy="53"
-                r="8"
-                fill="#4294E6"
-                className="transition-transform transform hover:scale-125 "
-              />
-              <foreignObject
-                x="102"
-                y="45"
-                width="16"
-                height="16"
-                onMouseEnter={() => setHoveredPoint(1)}
-                onMouseLeave={() => setHoveredPoint(null)}
-              >
-                <div className="bg-[#1C2937] rounded-full w-full h-full flex items-center justify-center ">
-                  <MdOutlineAutoGraph className="h-2 w-2 text-[#4294E6]" />
-                </div>
-              </foreignObject>
-
-              <circle
-                cx="250"
-                cy="50"
-                r="8"
-                fill="#4294E6"
-                className="transition-transform transform hover:scale-125"
-              />
-              <foreignObject
-                x="242"
-                y="42"
-                width="16"
-                height="16"
-                onMouseEnter={() => setHoveredPoint(2)}
-                onMouseLeave={() => setHoveredPoint(null)}
-              >
-                <div className="bg-[#1C2937] rounded-full w-full h-full flex items-center justify-center">
-                  <IoCheckmarkCircleSharp className="h-2 w-2 text-[#4294E6]" />
-                </div>
-              </foreignObject>
-            </svg>
-
-            {/* Tooltip for Circle 1 */}
-            {hoveredPoint === 1 && (
-              <div className="absolute top-[30%] left-[18%] bg-[#1C2937] border border-gray-600 p-1 rounded-md text-xs transition-opacity duration-300 opacity-100">
-                <span className="mr-1">⚡</span>
-                Alert - The login page has mobile issues.
-              </div>
-            )}
-
-            {/* Tooltip for Circle 2 */}
-            {hoveredPoint === 2 && (
-              <div className="absolute top-[27%]  md:left-[52%] sm:left-[12%] bg-[#1C2937] border border-gray-600 p-1 rounded-md text-xs transition-opacity duration-300 opacity-100">
-                <span className="mr-1">⚡</span>
-                Alert - The dashboard is experiencing latency.
-              </div>
-            )}
-          </div>
+      <circle
+        cx="110"
+        cy="53"
+        r="6"
+        fill="#4294E6"
+        className="transition-transform transform hover:scale-125"
+      />
+      <foreignObject
+        x="102"
+        y="45"
+        width="16"
+        height="16"
+        onMouseEnter={() => setHoveredPoint(1)}
+        onMouseLeave={() => setHoveredPoint(null)}
+      >
+        <div className="bg-[#1C2937] rounded-full w-full h-full flex items-center justify-center">
+          <MdOutlineAutoGraph className="h-2 w-2 text-[#4294E6]" />
         </div>
+      </foreignObject>
+
+      <circle
+        cx="250"
+        cy="50"
+        r="6"
+        fill="#4294E6"
+        className="transition-transform transform hover:scale-125"
+      />
+      <foreignObject
+        x="242"
+        y="42"
+        width="16"
+        height="16"
+        onMouseEnter={() => setHoveredPoint(2)}
+        onMouseLeave={() => setHoveredPoint(null)}
+      >
+        <div className="bg-[#1C2937] rounded-full w-full h-full flex items-center justify-center">
+          <IoCheckmarkCircleSharp className="h-2 w-2 text-[#4294E6]" />
+        </div>
+      </foreignObject>
+    </svg>
+
+    {/* Tooltip for Circle 1 */}
+    {hoveredPoint === 1 && (
+      <div className="absolute top-[30%] left-[18%] bg-[#1C2937] border border-gray-600 p-1 rounded-md text-xs transition-opacity duration-300 opacity-100">
+        <span className="mr-1">⚡</span>
+        Alert - The login page has mobile issues.
+      </div>
+    )}
+
+    {/* Tooltip for Circle 2 */}
+    {hoveredPoint === 2 && (
+      <div className="absolute top-[27%] left-[48%] md:left-[52%] bg-[#1C2937] border border-gray-600 p-1 rounded-md text-xs transition-opacity duration-300 opacity-100">
+        <span className="mr-1">⚡</span>
+        Alert - The dashboard is experiencing latency.
+      </div>
+    )}
+  </div>
+</div>
+
 
         {/* Lower Cards Container */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
