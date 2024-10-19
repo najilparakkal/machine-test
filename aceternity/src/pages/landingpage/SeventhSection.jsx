@@ -172,4 +172,4 @@ const SeventhSection = () => {
   );
 };
 
-export default SeventhSection;
+export default React.memo(SeventhSection);

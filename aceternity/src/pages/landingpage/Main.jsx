@@ -12,7 +12,6 @@ import LastSection from "../components/LastSection";
 const Main = () => {
   return (
     <div className="bg-black w-full h-screen font-monstera">
-      <NavBar />
       <FirstSection />
       <HeroScrollDemo />
       <ThirdSection />
@@ -21,9 +20,8 @@ const Main = () => {
       <Pricing />
       <SeventhSection/>
       <LastSection/>
-      {/*   <FooterSection/> */}
     </div>
   );
 };
 
-export default Main;
+export default React.memo(Main);

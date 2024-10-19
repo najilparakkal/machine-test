@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { LuMoon } from "react-icons/lu";
-import { IoIosSearch } from "react-icons/io";
-import { MdOutlineShoppingCart } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
-
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,7 +20,7 @@ const NavBar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [isScrolled]);
 
   return (
     <nav

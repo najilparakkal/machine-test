@@ -80,4 +80,4 @@ export const products = [
   },
 ];
 
-export default FirstSection;
+export default React.memo(FirstSection);

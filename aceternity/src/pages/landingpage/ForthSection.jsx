@@ -76,4 +76,4 @@ export const products = [
   },
 ];
 
-export default ForthSection;
+export default React.memo(ForthSection);
