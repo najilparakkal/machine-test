@@ -8,13 +8,16 @@ import FifthSection from "../components/EnterprenurSection";
 import Pricing from "../components/Pricing";
 import SeventhSection from "./SeventhSection";
 import LastSection from "../components/LastSection";
+import WhyTrustUs from "../components/WhyTrustUs";
 
 const Main = () => {
   return (
-    <div className="bg-black w-full h-screen font-monstera">
+    <div className="bg-black w-full h-fit font-monstera">
+      <NavBar />
       <FirstSection />
       <HeroScrollDemo />
       <ThirdSection />
+      <WhyTrustUs/>
       <ForthSection />
       <FifthSection />
       <Pricing />

@@ -1,8 +1,8 @@
 "use client";
 import React, { useRef, useState } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
-import { faPlay } from "@fortawesome/free-solid-svg-icons"; 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import "./secondsection.css";
 export const ContainerScroll = ({ titleComponent, children }) => {
   const containerRef = useRef(null);
@@ -32,28 +32,27 @@ export const ContainerScroll = ({ titleComponent, children }) => {
 
   return (
     <div
-    className="h-[60rem] md:h-[65rem]  flex items-center justify-center relative"
-    ref={containerRef}
-  >
-    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black to-transparent  md:mb-16 z-20 h-96" />
-  
-    <div
-      className="py-10 md:py-20 w-full  h-full relative flex items-center justify-center" 
-      style={{
-        perspective: "1000px",
-      }}
+      className="h-[60rem] md:h-[65rem]  flex items-center justify-center relative"
+      ref={containerRef}
     >
-      <Card
-        rotate={rotate}
-        translate={translate}
-        scale={scale}
-        className="h-[400px] md:h-[500px] "
+      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black to-transparent  md:mb-16 z-20 h-96" />
+
+      <div
+        className="py-10 md:py-20 w-full  h-full relative flex items-center justify-center"
+        style={{
+          perspective: "1000px",
+        }}
       >
-        {children}
-      </Card>
+        <Card
+          rotate={rotate}
+          translate={translate}
+          scale={scale}
+          className="h-[400px] md:h-[500px] "
+        >
+          {children}
+        </Card>
+      </div>
     </div>
-  </div>
-  
   );
 };
 
@@ -71,10 +70,10 @@ export const Header = ({ translate, titleComponent }) => {
 };
 
 export const Card = ({ rotate, scale, children }) => {
-  const [isOpen, setIsOpen] = useState(false); 
+  const [isOpen, setIsOpen] = useState(false);
 
   const handlePlayClick = () => {
-    setIsOpen(true); 
+    setIsOpen(true);
   };
 
   const handleClose = () => {
@@ -86,13 +85,14 @@ export const Card = ({ rotate, scale, children }) => {
       style={{
         rotateX: rotate,
         scale,
-        boxShadow: "0 10px 20px rgba(0, 0, 0, 0.25)", 
+        boxShadow: "0 10px 20px rgba(0, 0, 0, 0.25)",
       }}
       className="relative max-w-6xl   mx-auto md:h-[55rem] h-[45rem]  w-full  border-4 rounded-[30px] border-gray-900 bg-black  card-with-animated-border"
     >
       <div className="w-full h-full bg-black rounded-[30px] p-6 ">
         <div className="h-full w-full overflow-hidden rounded-[30px] dark:bg-zinc-900 relative">
           <img
+            loading="lazy"
             src="/seondSection/first.png"
             alt="Card Image"
             className="h-[1100px] -mt-24 w-full object-cover rounded-2xl "

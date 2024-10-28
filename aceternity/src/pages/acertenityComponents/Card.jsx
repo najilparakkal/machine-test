@@ -15,6 +15,7 @@ const Card = ({
         <div className="flex flex-col h-full justify-between">
           <CardItem translateZ="100" className="w-full h-2/3  rounded-2xl">
             <img
+              loading="lazy"
               src={image}
               className="h-full w-full object-cover rounded-3xl group-hover/card:shadow-xl"
               alt="thumbnail"

@@ -24,19 +24,19 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`fixed top-0 z-50 mt-2 flex items-center justify-between px-6 py-4 h-14 rounded-xl shadow-md transition-all duration-500 ease ${
+      className={`fixed top-0 z-50 mt-2 flex items-center justify-between px-3 md:px-6 py-3 h-14 rounded-xl shadow-md transition-all duration-500 ease-in-out ${
         isScrolled
           ? "left-[5%] right-[5%] lg:left-[8.33%] lg:right-[8.33%] bg-[#171717]"
           : "left-0 right-0 bg-black"
       }`}
     >
-      <div className="flex items-center space-x-11">
+      <div className="flex items-center space-x-2 sm:space-x-6">
         {/* Logo and Brand */}
         <div
-          className="flex items-center space-x-3 hover:cursor-pointer"
+          className="flex items-center space-x-2 hover:cursor-pointer"
           onClick={() => navigate("/")}
         >
-          <div className="bg-white rounded-full">
+          <div className="bg-white rounded-full p-1">
             <svg
               width="18"
               height="18"
@@ -50,17 +50,23 @@ const NavBar = () => {
               />
             </svg>
           </div>
-          <span className="hidden md:block text-white text-lg font-bold">
-            Proactiv
+          <span className="hidden sm:block text-white text-lg font-bold">
+            UptimeWiz
           </span>
         </div>
 
-        {/* Menu Links for Medium and Larger Screens */}
-        <div className="hidden md:flex items-start text-lg space-x-6 text-[#C9CACB]">
-          <a  onClick={() => navigate("/features")} className="hover:text-white transition-colors">
-            Features
+        {/* Menu Links */}
+        <div className="hidden md:flex items-center space-x-3 text-[#C9CACB] text-xs sm:text-sm">
+          <a
+            onClick={() => navigate("/features")}
+            className="hover:text-white transition-colors"
+          >
+            Key Features
           </a>
-          <a onClick={()=>navigate("/pricing")} className="hover:text-white transition-colors">
+          <a
+            onClick={() => navigate("/pricing")}
+            className="hover:text-white transition-colors"
+          >
             Pricing
           </a>
           <a
@@ -73,23 +79,23 @@ const NavBar = () => {
             onClick={() => navigate("/contact")}
             className="hover:text-white transition-colors"
           >
-            Contact
+            Contact Us
           </a>
         </div>
       </div>
 
       {/* Menu Button and Actions */}
-      <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-2 md:space-x-3">
         {/* Register and Demo for Medium and Larger Screens */}
         <a
           onClick={() => navigate("/login")}
-          className="hidden md:block text-gray-400 text-base text-[15px] hover:text-white transition-colors py-2 px-6 rounded-lg hover:bg-[#34B1D9]"
+          className="hidden md:block text-gray-400 text-xs sm:text-sm hover:text-white transition-colors py-1 px-3 rounded-lg hover:bg-[#141414] border border-gray-900 hover:border-gray-700"
         >
           Register
         </a>
 
-        <button className="hidden md:block bg-[#34B1D9] text-black font-semibold py-[8px] px-0 text-[13px] rounded-lg w-28 hover:bg-gray-100 transition-colors">
-          Book a demo
+        <button className="hidden md:block bg-[#34B1D9] text-black font-semibold py-1 px-3 rounded-lg text-xs sm:text-sm hover:bg-gray-100 transition-colors">
+          Login
         </button>
 
         {/* Mobile Menu Toggle Button */}
@@ -106,13 +112,19 @@ const NavBar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu (visible on small screens only) */}
+      {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="absolute top-14 left-0 right-0 bg-black border-t border-gray-800 text-white flex flex-col space-y-2 px-6 py-4 md:hidden">
-          <a onClick={() => navigate("/features")} className="hover:text-gray-300 transition-colors">
-            Features
+        <div className="absolute top-14 left-0 right-0 bg-black border-t border-gray-800 text-white flex flex-col space-y-2 px-6 py-3 md:hidden">
+          <a
+            onClick={() => navigate("/features")}
+            className="hover:text-gray-300 transition-colors"
+          >
+            Key Features
           </a>
-          <a onClick={() => navigate("/pricing")} className="hover:text-gray-300 transition-colors">
+          <a
+            onClick={() => navigate("/pricing")}
+            className="hover:text-gray-300 transition-colors"
+          >
             Pricing
           </a>
           <a
@@ -125,14 +137,14 @@ const NavBar = () => {
             onClick={() => navigate("/contact")}
             className="hover:text-gray-300 transition-colors"
           >
-            Contact
+            Contact Us
           </a>
 
-          <button className="bg-white text-black font-semibold w-full py-2 text-sm rounded-lg hover:bg-gray-100 transition-colors">
-            Book a demo
+          <button className="bg-white text-black font-semibold w-full py-1 text-sm rounded-lg hover:bg-gray-100 transition-colors">
+            Login
           </button>
 
-          <div className="flex gap-4">
+          <div className="flex gap-4 mt-3">
             <button
               aria-label="Twitter X"
               className="hover:text-white transition-colors"

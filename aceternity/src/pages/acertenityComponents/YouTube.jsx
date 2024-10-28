@@ -11,6 +11,7 @@ const YouTube = ({ image, text, gradientColor }) => {
       >
         <div className="p-6 w-full md:w-1/2 flex-shrink-0">
           <img
+            loading="lazy"
             src={image}
             alt=""
             className="w-full rounded-2xl h-[200px] md:h-[350px] object-cover"

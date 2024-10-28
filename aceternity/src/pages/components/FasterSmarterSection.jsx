@@ -3,6 +3,7 @@ import { useState } from "react";
 import { MdOutlineAutoGraph } from "react-icons/md";
 import { IoCheckmarkCircleSharp } from "react-icons/io5";
 import { BiCommand } from "react-icons/bi";
+import { gradientStyle } from "../../utils";
 
 export default function Component() {
   const [hoveredPoint, setHoveredPoint] = useState(null);
@@ -35,171 +36,177 @@ export default function Component() {
   return (
     <div className="bg-black  min-h-screen flex flex-col items-center justify-center p-8 space-y-10">
       <div className="text-center mb-10">
-        <h1 className="md:text-5xl sm:text-2xl font-bold mb-2  text-center relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
-          Faster. Smarter. Reliable Monitoring
-        </h1>
-        <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-          Many services promise reliability, but not all of them deliver. Our
-          uptime monitoring solution is designed to ensure that your website or
-          application stays online and responsive, with minimal disruption.
-        </p>
+        <div className="grid gap-6 items-center justify-items-center">
+          <h1
+            style={gradientStyle}
+            className="md:text-5xl sm:text-2xl font-bold w-full sm:w-3/4 text-center py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white"
+          >
+            Proactive Uptime Monitoring for Your Peace of Mind
+          </h1>
+          <p className="text-gray-400 text-lg max-w-2xl">
+            UptimeWiz delivers round-the-clock monitoring to ensure your website
+            or app stays online. We catch issues before they become problems,
+            helping you maintain a seamless digital experience for your users.
+          </p>
+        </div>
       </div>
 
       <div className="w-full max-w-7xl space-y-8">
-      <div className="p-1 sm:p-2 md:p-4 border border-gray-800 rounded-xl shadow-lg">
-  <h2 className="text-sm sm:text-base md:text-lg font-semibold mb-2">
-    Optimized for performance
-  </h2>
-  <p className="text-gray-400 mb-3 text-xs sm:text-sm md:text-base">
-    Optimize your system's uptime and user experience. Our monitoring
-    platform helps you catch issues before they affect your users,
-    offering detailed metrics and real-time alerts.
-  </p>
+        <div className="p-1 sm:p-2 md:p-4 border border-gray-800 rounded-xl shadow-lg">
+          <h2 className="text-sm text-gray-400 sm:text-base md:text-lg font-semibold mb-2">
+            Real-Time Monitoring
+          </h2>
+          <p className="text-gray-400 mb-3 text-xs sm:text-sm md:text-base">
+            Our platform tracks your website's health 24/7, providing instant
+            notifications for outages and performance slowdowns, so you can take
+            action fast.
+          </p>
 
-  <div className="relative p-1 sm:p-2 md:p-4 rounded-lg overflow-hidden h-32 sm:h-48 md:h-64 lg:h-80">
-    <svg
-      className="w-full h-full"
-      viewBox="0 0 400 100"
-      preserveAspectRatio="none"
-    >
-      <defs>
-        <pattern
-          id="grid"
-          width="20"
-          height="20"
-          patternUnits="userSpaceOnUse"
-        >
-          <path
-            d="M 20 0 L 0 0 0 20"
-            fill="none"
-            stroke="rgba(255,255,255,0.1)"
-            strokeWidth="0.5"
-          />
-        </pattern>
-      </defs>
-      <rect width="100%" height="100%" fill="url(#grid)" />
+          <div className="relative p-1 sm:p-2 md:p-4 rounded-lg overflow-hidden h-32 sm:h-48 md:h-64 lg:h-80">
+            <svg
+              className="w-full h-full"
+              viewBox="0 0 400 100"
+              preserveAspectRatio="none"
+            >
+              <defs>
+                <pattern
+                  id="grid"
+                  width="20"
+                  height="20"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <path
+                    d="M 20 0 L 0 0 0 20"
+                    fill="none"
+                    stroke="rgba(255,255,255,0.1)"
+                    strokeWidth="0.5"
+                  />
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#grid)" />
 
-      <line
-        x1="0"
-        y1="25"
-        x2="400"
-        y2="25"
-        stroke="#1C2937"
-        strokeWidth="0.5"
-      />
-      <line
-        x1="0"
-        y1="50"
-        x2="400"
-        y2="50"
-        stroke="#1C2937"
-        strokeWidth="0.5"
-      />
-      <line
-        x1="0"
-        y1="75"
-        x2="400"
-        y2="75"
-        stroke="#1C2937"
-        strokeWidth="0.5"
-      />
+              <line
+                x1="0"
+                y1="25"
+                x2="400"
+                y2="25"
+                stroke="#1C2937"
+                strokeWidth="0.5"
+              />
+              <line
+                x1="0"
+                y1="50"
+                x2="400"
+                y2="50"
+                stroke="#1C2937"
+                strokeWidth="0.5"
+              />
+              <line
+                x1="0"
+                y1="75"
+                x2="400"
+                y2="75"
+                stroke="#1C2937"
+                strokeWidth="0.5"
+              />
 
-      {Array.from({ length: 7 }).map((_, i) => (
-        <line
-          key={i}
-          x1={i * 50}
-          y1="0"
-          x2={i * 50}
-          y2="100"
-          stroke="#1C2937"
-          strokeWidth="0.5"
-        />
-      ))}
+              {Array.from({ length: 7 }).map((_, i) => (
+                <line
+                  key={i}
+                  x1={i * 50}
+                  y1="0"
+                  x2={i * 50}
+                  y2="100"
+                  stroke="#1C2937"
+                  strokeWidth="0.5"
+                />
+              ))}
 
-      <polyline
-        fill="none"
-        stroke="#4294E6"
-        strokeWidth="0.5"
-        points="0,80 40,60 80,90 110,50 150,60 180,20 220,70 250,50 280,90 360,10 400,50"
-      >
-        <animate
-          attributeName="stroke-dasharray"
-          from="0,400"
-          to="400,0"
-          dur="2s"
-          fill="freeze"
-        />
-      </polyline>
+              <polyline
+                fill="none"
+                stroke="#4294E6"
+                strokeWidth="0.5"
+                points="0,80 40,60 80,90 110,50 150,60 180,20 220,70 250,50 280,90 360,10 400,50"
+              >
+                <animate
+                  attributeName="stroke-dasharray"
+                  from="0,400"
+                  to="400,0"
+                  dur="2s"
+                  fill="freeze"
+                />
+              </polyline>
 
-      <circle
-        cx="110"
-        cy="53"
-        r="6"
-        fill="#4294E6"
-        className="transition-transform transform hover:scale-125"
-      />
-      <foreignObject
-        x="102"
-        y="45"
-        width="16"
-        height="16"
-        onMouseEnter={() => setHoveredPoint(1)}
-        onMouseLeave={() => setHoveredPoint(null)}
-      >
-        <div className="bg-[#1C2937] rounded-full w-full h-full flex items-center justify-center">
-          <MdOutlineAutoGraph className="h-2 w-2 text-[#4294E6]" />
+              <circle
+                cx="110"
+                cy="53"
+                r="6"
+                fill="#4294E6"
+                className="transition-transform transform hover:scale-125"
+              />
+              <foreignObject
+                x="102"
+                y="45"
+                width="16"
+                height="16"
+                onMouseEnter={() => setHoveredPoint(1)}
+                onMouseLeave={() => setHoveredPoint(null)}
+              >
+                <div className="bg-[#1C2937] rounded-full w-full h-full flex items-center justify-center">
+                  <MdOutlineAutoGraph className="h-2 w-2 text-[#4294E6]" />
+                </div>
+              </foreignObject>
+
+              <circle
+                cx="250"
+                cy="50"
+                r="6"
+                fill="#4294E6"
+                className="transition-transform transform hover:scale-125"
+              />
+              <foreignObject
+                x="242"
+                y="42"
+                width="16"
+                height="16"
+                onMouseEnter={() => setHoveredPoint(2)}
+                onMouseLeave={() => setHoveredPoint(null)}
+              >
+                <div className="bg-[#1C2937] rounded-full w-full h-full flex items-center justify-center">
+                  <IoCheckmarkCircleSharp className="h-2 w-2 text-[#4294E6]" />
+                </div>
+              </foreignObject>
+            </svg>
+
+            {/* Tooltip for Circle 1 */}
+            {hoveredPoint === 1 && (
+              <div className="absolute top-[30%] left-[18%] bg-[#1C2937] border border-gray-600 p-1 rounded-md text-xs transition-opacity duration-300 opacity-100">
+                <span className="mr-1">⚡</span>
+                Alert - The login page has mobile issues.
+              </div>
+            )}
+
+            {/* Tooltip for Circle 2 */}
+            {hoveredPoint === 2 && (
+              <div className="absolute top-[27%] left-[48%] md:left-[52%] bg-[#1C2937] border border-gray-600 p-1 rounded-md text-xs transition-opacity duration-300 opacity-100">
+                <span className="mr-1">⚡</span>
+                Alert - The dashboard is experiencing latency.
+              </div>
+            )}
+          </div>
         </div>
-      </foreignObject>
-
-      <circle
-        cx="250"
-        cy="50"
-        r="6"
-        fill="#4294E6"
-        className="transition-transform transform hover:scale-125"
-      />
-      <foreignObject
-        x="242"
-        y="42"
-        width="16"
-        height="16"
-        onMouseEnter={() => setHoveredPoint(2)}
-        onMouseLeave={() => setHoveredPoint(null)}
-      >
-        <div className="bg-[#1C2937] rounded-full w-full h-full flex items-center justify-center">
-          <IoCheckmarkCircleSharp className="h-2 w-2 text-[#4294E6]" />
-        </div>
-      </foreignObject>
-    </svg>
-
-    {/* Tooltip for Circle 1 */}
-    {hoveredPoint === 1 && (
-      <div className="absolute top-[30%] left-[18%] bg-[#1C2937] border border-gray-600 p-1 rounded-md text-xs transition-opacity duration-300 opacity-100">
-        <span className="mr-1">⚡</span>
-        Alert - The login page has mobile issues.
-      </div>
-    )}
-
-    {/* Tooltip for Circle 2 */}
-    {hoveredPoint === 2 && (
-      <div className="absolute top-[27%] left-[48%] md:left-[52%] bg-[#1C2937] border border-gray-600 p-1 rounded-md text-xs transition-opacity duration-300 opacity-100">
-        <span className="mr-1">⚡</span>
-        Alert - The dashboard is experiencing latency.
-      </div>
-    )}
-  </div>
-</div>
-
 
         {/* Lower Cards Container */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Scalability Card */}
           <div className="relative p-6 rounded-xl shadow-lg flex flex-col">
-            <h2 className="text-xl font-semibold mb-2">Scalability</h2>
+            <h2 className="text-xl text-gray-400  font-semibold mb-2">
+              Scalable Solutions
+            </h2>
             <p className="text-gray-400 mb-4">
-              Our monitoring service balances performance and flexibility,
-              adapting to your system's growth and evolving needs without
-              compromising on reliability or security.
+              UptimeWiz scales with your needs, whether you’re monitoring a
+              single site or multiple complex applications across different
+              regions.
             </p>
             <div className="relative flex-grow flex items-center justify-center">
               <div className="bg-gradient-to-tr from-gray-900 to-transparent p-5 rounded-full z-10">
@@ -217,11 +224,11 @@ export default function Component() {
           {/* Alerts & Notifications Card */}
           <div className="border border-gray-800 p-2 sm:p-4 rounded-xl shadow-lg w-full max-w-full">
             <h2 className="text-sm sm:text-lg font-semibold text-white">
-              Alerts & Notifications
+              Instant Alerts
             </h2>
             <p className="text-gray-400 mb-2 sm:mb-3 text-xs sm:text-sm">
-              Receive real-time notifications as soon as any downtime or
-              performance degradation is detected.
+              Get notified via email, SMS, or Call the moment an issue arises—no
+              surprises, just timely alerts.
             </p>
             <div className="relative bg-gradient-to-bl from-black to-transparent -mt-2 sm:-mt-4 p-3 sm:p-4 rounded-lg overflow-hidden h-32 sm:h-40">
               <div

@@ -317,6 +317,7 @@ const PricingMain = () => {
                 onMouseLeave={() => setHoveredLogo("")}
               >
                 <img
+                loading="lazy"
                   src={logo.url}
                   alt={logo.name}
                   className={`w-full h-full object-contain transition-all duration-300 ${

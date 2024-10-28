@@ -43,7 +43,7 @@ export const HeroParallax = ({ products }) => {
   return (
     <div
       ref={ref}
-      className="h-[300vh]  py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:600px] [transform-style:preserve-3d]"
+      className="py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:600px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -53,9 +53,9 @@ export const HeroParallax = ({ products }) => {
           translateY,
           opacity,
         }}
-        className=""
+        className="hidden md:block"
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-5 ">
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-5">
           {firstRow.map((product) => (
             <ProductCard
               product={product}
@@ -64,7 +64,7 @@ export const HeroParallax = ({ products }) => {
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row space-x-5 ">
+        <motion.div className="flex flex-row space-x-5">
           {secondRow.map((product) => (
             <ProductCard
               product={product}
@@ -96,14 +96,13 @@ export const Header = () => {
             {/* First Card */}
             <div className="flex-1 gap-3 z-10 rounded-lg p-4 backdrop-blur-sm bg-opacity-50 bg-gray-900/5 flex flex-col items-center h-60">
               <div className="flex flex-col items-center justify-center h-full">
-                <MdOutlineForwardToInbox className="text-[#06B6D4] w-16 h-16 flex-shrink-0 bg-black rounded-lg p-2" />{" "}
-                {/* Icon with black background */}
+                <MdOutlineForwardToInbox className="text-[#06B6D4] w-16 h-16 flex-shrink-0 bg-black rounded-lg p-2" />
                 <h1 className="text-lg md:text-4xl font-bold dark:text-white mb-2 text-center">
-                  Email Automation
+                  Multi-Channel Alerts
                 </h1>
                 <p className="max-w-2xl text-sm md:text-xl mt-2 text-[#737373] font-bold mb-8 text-center">
-                  With our best-in-class email automation, you can automate your
-                  entire emailing process.
+                  Receive instant notifications through various channels—email,
+                  SMS, Slack, and webhook—keeping you updated on every event.
                 </p>
               </div>
             </div>
@@ -111,14 +110,13 @@ export const Header = () => {
             {/* Second Card */}
             <div className="flex-1 gap-3 z-10 rounded-lg p-4 backdrop-blur-sm bg-opacity-50 bg-gray-900/5 flex flex-col items-center h-60">
               <div className="flex flex-col items-center justify-center h-full">
-              <TbFidgetSpinner className="text-[#06B6D4] w-16 h-16 flex-shrink-0 bg-black rounded-lg p-2" />{" "}
-
-                <h1 className="text-lg md:text-4xl font-bold dark:text-white mb-2  text-center">
-                  Cross Platform Marketing
+                <TbFidgetSpinner className="text-[#06B6D4] w-16 h-16 flex-shrink-0 bg-black rounded-lg p-2" />
+                <h1 className="text-lg md:text-4xl font-bold dark:text-white mb-2 text-center">
+                  Comprehensive Monitoring
                 </h1>
                 <p className="max-w-2xl text-sm md:text-xl mt-2 text-[#737373] font-bold mb-8 text-center">
-                  With our cross-platform marketing, you can reach your audience
-                  on all the platforms use.
+                  Monitor websites, APIs, and applications across different
+                  platforms and devices seamlessly, all in one place.
                 </p>
               </div>
             </div>
@@ -135,10 +133,9 @@ export const Header = () => {
                   viewBox="0 0 64 64"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="bg-black rounded-lg"
+                  className="w-16 h-16 flex-shrink-0 bg-black rounded-lg"
                 >
-                  <rect width="64" height="64" rx="8" fill="black" />{" "}
-                  {/* Added black background */}
+                  <rect width="64" height="64" rx="8" fill="black" />
                   <text
                     x="16"
                     y="40"
@@ -150,11 +147,12 @@ export const Header = () => {
                   </text>
                 </svg>
                 <h1 className="text-lg md:text-4xl font-bold dark:text-white mb-2 text-center">
-                  Managed CRM
+                  Managed Incident Reports
                 </h1>
                 <p className="max-w-2xl text-sm md:text-xl mt-2 text-[#737373] font-bold mb-8 text-center">
-                  With our managed CRM, you can manage your leads and contacts
-                  in one place.
+                  Track and manage incidents with ease. UptimeWiz keeps a
+                  detailed log of all detected issues to streamline
+                  troubleshooting and analysis.
                 </p>
               </div>
             </div>
@@ -168,10 +166,9 @@ export const Header = () => {
                   viewBox="0 0 64 64"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="bg-black rounded-lg"
+                  className="w-16 h-16 flex-shrink-0 bg-black rounded-lg"
                 >
-                  <rect width="64" height="64" rx="8" fill="black" />{" "}
-                  {/* Added black background */}
+                  <rect width="64" height="64" rx="8" fill="black" />
                   <text
                     x="16"
                     y="40"
@@ -183,11 +180,11 @@ export const Header = () => {
                   </text>
                 </svg>
                 <h1 className="text-lg md:text-4xl font-bold dark:text-white mb-2 text-center">
-                  Apps Automation
+                  Automated Monitoring Checks
                 </h1>
                 <p className="max-w-2xl text-sm md:text-xl mt-2 text-[#737373] font-bold mb-8 text-center">
-                  We have cloned Zapier and built our very own apps automation
-                  platform.
+                  Automate routine monitoring tasks, from SSL expiry checks to
+                  server health assessments, using our robust automation tools.
                 </p>
               </div>
             </div>
@@ -211,6 +208,7 @@ export const ProductCard = ({ product, translate }) => {
       className="group/product h-96 w-[30rem] relative flex-shrink-0 "
     >
       <img
+        loading="lazy"
         src={product.thumbnail}
         height="600"
         width="600"

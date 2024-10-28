@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "./EnterprenurSection.css";
 import TestimonialSection from "./EnterprenurSectionMainCard";
 import { TbLocationBolt } from "react-icons/tb";
+import { gradientStyle } from "../../utils";
 
 const EnterprenurSection = () => {
   const cardsData = [
@@ -159,20 +160,23 @@ const EnterprenurSection = () => {
   return (
     <div className="bg-black w-full relative">
       <div className="w-full">
-        <div className="h-[400px] w-full flex">
-          <div className="max-w-4xl mx-auto flex flex-col items-center text-center justify-center">
+        <div className="h-[400px] w-full flex px-4 sm:px-6 md:px-8 lg:px-12">
+          <div className="max-w-4xl mx-auto flex flex-col items-center text-center justify-center p-4 sm:p-6 md:p-8 lg:p-12">
             <div className="inline-block mb-8 p-[4px] bg-[#2B2B2B] rounded-lg">
-            <div className="p-1 bg-black rounded-md shadow-2xl shadow-[#06B6D4]">
-
-              <TbLocationBolt className="bg-black text-[#06B6D4] p-3 w-12 h-12 md:w-13 md:h-13 rounded-lg flex-shrink-0" />
+              <div className="p-1 bg-black rounded-md shadow-2xl shadow-[#06B6D4]">
+                <TbLocationBolt className="bg-black text-[#06B6D4] p-3 w-12 h-12 md:w-13 md:h-13 rounded-lg flex-shrink-0" />
+              </div>
             </div>
-            </div>
 
-            <h2 className="text-6xl text-white mb-4 tracking-tight">
-              Used by entrepreneurs
+            <h2
+              style={gradientStyle}
+              className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 tracking-tight"
+            >
+              Used by Webmasters and DevOps Teams
             </h2>
-            <p className="text-xl text-gray-400">
-              Proactiv is used by serial entrepreneurs and overachievers.
+            <p className="text-md sm:text-lg text-gray-400">
+              UptimeWiz is trusted by businesses, developers, and IT
+              professionals to ensure uptime reliability.
             </p>
           </div>
         </div>
@@ -197,6 +201,7 @@ const EnterprenurSection = () => {
                       </p>
                       <div className="flex items-center gap-4">
                         <img
+                          loading="lazy"
                           src={card.image}
                           alt={card.title}
                           className="w-14 h-14 rounded-full mb-4 z-10"
@@ -230,6 +235,7 @@ const EnterprenurSection = () => {
                       </p>
                       <div className="flex items-center gap-4">
                         <img
+                          loading="lazy"
                           src={card.image}
                           alt={card.title}
                           className="w-14 h-14 rounded-full mb-4"
@@ -263,6 +269,7 @@ const EnterprenurSection = () => {
                       </p>
                       <div className="flex items-center gap-1">
                         <img
+                          loading="lazy"
                           src={card.image}
                           alt={card.title}
                           className="w-14 h-14 rounded-full mb-4"

@@ -1,4 +1,5 @@
 import React from "react";
+import { gradientStyle } from "../../utils";
 
 const Footer = () => {
   return (
@@ -20,7 +21,7 @@ const Footer = () => {
                 />
               </svg>{" "}
             </div>
-            <span className="text-xl font-semibold">Proactiv</span>
+            <span style={gradientStyle} className="text-xl font-semibold">Proactiv</span>
           </div>
           <p className="text-sm text-gray-400">Copyright © 2024 Proactiv INC</p>
           <p className="text-sm text-gray-400">All rights reserved</p>

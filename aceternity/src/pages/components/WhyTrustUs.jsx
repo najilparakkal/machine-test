@@ -1,10 +1,11 @@
 import React from "react";
+import { gradientStyle } from "../../utils";
 
 const WhyTrustUs = () => {
   return (
     <div className=" px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl sm:text-5xl font-bold max-w-7xl mx-auto text-center relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
+        <h1 style={gradientStyle} className="text-4xl sm:text-5xl font-bold max-w-7xl mx-auto text-center relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
         Why trust us?
       </h1>
         <p className="text-center text-[#A3A3A3] mb-16 max-w-3xl mx-auto">
@@ -97,4 +98,4 @@ const Section = ({ title, items }) => (
   </div>
 );
 
-export default WhyTrustUs;
+export default React.memo(WhyTrustUs);

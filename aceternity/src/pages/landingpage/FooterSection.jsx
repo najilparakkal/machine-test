@@ -9,6 +9,7 @@ const FooterSection = () => {
           <div className="w-full md:w-1/2 p-6">
             <div className="flex gap-3 mt-9 items-center">
               <img
+              loading="lazy"
                 src="/logo-dark.webp"
                 alt="Aceternity UI Logo"
                 className="h-6 w-6"

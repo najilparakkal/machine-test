@@ -5,21 +5,21 @@ import { Sparkles } from "../acertenityComponents/Tools";
 const testimonials = [
   {
     name: "Manu Arora",
-    title: "Tech Innovator & Entrepreneur",
+    title: "John Doe - CTO, Tech Solutions",
     image: "/fifthSection/150.jpg",
     quote:
       "I made a soap with the help of AI, it was so easy to use. I'm so glad this happened because it revolutionized my entire business model and production process.",
   },
   {
     name: "Tyler Durden",
-    title: "Creative Director & Business Owner",
+    title: "Jane Smith - Product Manager, Digital Agency",
     image: "/fifthSection/150(1).jpg",
     quote:
-      "This AI tool has revolutionized our workflow. It's like having a genius assistant at your fingertips 24/7.",
+      "UptimeWiz saved us from unexpected downtimes and helped us keep our clients happy.",
   },
   {
     name: "Alice Johnson",
-    title: "Senior Software Engineer",
+    title: "Michael Lee - Senior DevOps Engineer",
     image: "/fifthSection/150(2).jpg",
     quote:
       "The efficiency gains we've seen with this AI are unprecedented. It's a game-changer for our development process.",
@@ -44,6 +44,7 @@ export default function TestimonialSection() {
         <div className="bg-gradient-to-b from-[#151616] to-transparent h-[300px] w-[300px] md:h-[450px] md:w-[450px] relative rounded-full flex justify-center">
           <div className="w-12 h-12 md:w-16 md:h-16 mb-8 rounded-full overflow-hidden border border-gray-700 shadow-lg mt-7">
             <img
+            loading="lazy"
               src={testimonials[activeIndex].image}
               alt={testimonials[activeIndex].name}
               className="w-full h-full object-cover"

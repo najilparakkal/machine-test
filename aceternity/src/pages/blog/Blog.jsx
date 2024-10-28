@@ -3,6 +3,7 @@ import { FocusCards } from "../acertenityComponents/BlogCard";
 import NavBar from "../components/NavBar";
 import ClipboardIcon from "./Icon";
 import Footer from "../components/Footer";
+import { gradientStyle } from "../../utils";
 
 const Blog = () => {
   const cardsData = [
@@ -63,7 +64,7 @@ const Blog = () => {
           <div className="inline-block p-1 h-14 w-14 bg-gray-800 rounded-lg mb-4 shadow-2xl shadow-[#06B6D4]">
             <ClipboardIcon />
           </div>
-          <h1 className="text-5xl font-semibold text-white mb-4">Blog</h1>
+          <h1 style={gradientStyle} className="text-5xl font-semibold text-white mb-4">Blog</h1>
           <p className="text-xl text-gray-300">
             Discover insightful resources and expert advice from our seasoned
             team to elevate your knowledge.
@@ -84,6 +85,7 @@ const Blog = () => {
               <div className="flex items-center justify-between">
                 <span className="text-gray-500">{post.date}</span>
                 <img
+                loading="lazy"
                   src={post.authorImage}
                   alt="Author"
                   width={32}

@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import EnvelopeIcon from "./Icon";
+import { gradientStyle } from "../../utils";
 
 const Contact = () => {
   return (
@@ -14,7 +15,7 @@ const Contact = () => {
               <div className="w-fit p-[1px] rounded-lg ">
                 <EnvelopeIcon />
               </div>
-              <h2 className="text-[55px] font-semibold text-white mb-4">
+              <h2 style={gradientStyle} className="text-[55px] font-semibold text-white mb-4">
                 Contact us
               </h2>
               <p className="mb-8 text-gray-400">
