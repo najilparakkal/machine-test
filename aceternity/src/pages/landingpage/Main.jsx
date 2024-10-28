@@ -12,18 +12,20 @@ import WhyTrustUs from "../components/WhyTrustUs";
 
 const Main = () => {
   return (
-    <div className="bg-black w-full h-fit font-monstera">
-      <NavBar />
-      <FirstSection />
-      <HeroScrollDemo />
-      <ThirdSection />
-      <WhyTrustUs/>
-      <ForthSection />
-      <FifthSection />
-      <Pricing />
-      <SeventhSection/>
-      <LastSection/>
-    </div>
+    <>
+      
+      <div className="bg-black w-full h-fit font-monstera">
+        <FirstSection />
+        <HeroScrollDemo />
+        <ThirdSection />
+        <WhyTrustUs />
+        <ForthSection />
+        <FifthSection />
+        <Pricing />
+        <SeventhSection />
+        <LastSection />
+      </div>
+    </>
   );
 };
 

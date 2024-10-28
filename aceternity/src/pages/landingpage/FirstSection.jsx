@@ -56,6 +56,7 @@ const FirstSection = () => {
       
 
       <div className="bg-black text-white min-h-screen w-full flex flex-col    items-center justify-center px-4 sm:px-8 md:px-16 lg:px-24">
+      <NavBar />
         <Sparkles />
         <h1 style={gradientStyle} className="text-2xl sm:text-3xl md:text-4xl lg:text-7xl font-bold max-w-7xl mx-auto text-center mt-32 sm:mt-48 md:mt-64 relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
           Keep Your Website Online with UptimeWiz

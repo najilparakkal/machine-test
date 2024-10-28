@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import { LuMoon } from "react-icons/lu";
 import { FiMenu } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
@@ -11,7 +11,7 @@ const NavBar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
@@ -31,7 +31,6 @@ const NavBar = () => {
       }`}
     >
       <div className="flex items-center space-x-2 sm:space-x-6">
-        {/* Logo and Brand */}
         <div
           className="flex items-center space-x-2 hover:cursor-pointer"
           onClick={() => navigate("/")}
@@ -55,7 +54,6 @@ const NavBar = () => {
           </span>
         </div>
 
-        {/* Menu Links */}
         <div className="hidden md:flex items-center space-x-3 text-[#C9CACB] text-xs sm:text-sm">
           <a
             onClick={() => navigate("/features")}
@@ -84,9 +82,7 @@ const NavBar = () => {
         </div>
       </div>
 
-      {/* Menu Button and Actions */}
       <div className="flex items-center space-x-2 md:space-x-3">
-        {/* Register and Demo for Medium and Larger Screens */}
         <a
           onClick={() => navigate("/login")}
           className="hidden md:block text-gray-400 text-xs sm:text-sm hover:text-white transition-colors py-1 px-3 rounded-lg hover:bg-[#141414] border border-gray-900 hover:border-gray-700"
@@ -98,7 +94,6 @@ const NavBar = () => {
           Login
         </button>
 
-        {/* Mobile Menu Toggle Button */}
         <button
           aria-label="Toggle Menu"
           className="block md:hidden text-white"
@@ -112,7 +107,6 @@ const NavBar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="absolute top-14 left-0 right-0 bg-black border-t border-gray-800 text-white flex flex-col space-y-2 px-6 py-3 md:hidden">
           <a
