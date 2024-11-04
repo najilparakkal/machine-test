@@ -4,6 +4,8 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import "./secondsection.css";
+
+
 export const ContainerScroll = ({ titleComponent, children }) => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({

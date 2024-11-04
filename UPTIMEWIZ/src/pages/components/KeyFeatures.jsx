@@ -21,7 +21,6 @@ import {
     return (
       <div className="p-8 max-w-7xl mx-auto bg-white rounded-lg mt-16">
         <div className="grid md:grid-cols-4 gap-8">
-          {/* BUILD Section */}
           <div className="space-y-6">
             <h2 className="text-sm font-semibold text-gray-600">BUILD</h2>
             <div className="space-y-6">
@@ -64,7 +63,6 @@ import {
             </div>
           </div>
   
-          {/* MANAGE Section */}
           <div className="space-y-6">
             <h2 className="text-sm font-semibold text-gray-600">MANAGE</h2>
             <div className="space-y-6">
