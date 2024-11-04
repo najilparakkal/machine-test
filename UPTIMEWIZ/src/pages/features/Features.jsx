@@ -16,7 +16,7 @@ const Features = () => {
       <div className="">
         <EnterprenurSection />
       </div>
-      <LastSection/>
+      <LastSection />
     </div>
   );
 };
