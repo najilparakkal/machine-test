@@ -6,7 +6,7 @@ export function cn(...inputs) {
 }
 
 export const gradientStyle = {
-  background: 'linear-gradient(to right, white, #04FFFF)',
-  WebkitBackgroundClip: 'text',
-  color: 'transparent',
+  background: "linear-gradient(to right, white, #04FFFF)",
+  WebkitBackgroundClip: "text",
+  color: "transparent",
 };

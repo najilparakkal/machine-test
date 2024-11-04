@@ -1,4 +1,3 @@
-
 import { Routes, Route } from "react-router-dom";
 import Routers from "./routers/Routers";
 
@@ -8,7 +7,6 @@ function App() {
       <Routes>
         <Route path="*" element={<Routers />} />
       </Routes>
-      
     </>
   );
 }
