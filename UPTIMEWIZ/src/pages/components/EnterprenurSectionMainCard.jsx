@@ -37,8 +37,8 @@ export default function TestimonialSection() {
   }, []);
 
   return (
-    <div className="w-full min-h-[600px] z-auto flex items-center justify-center text-[#D8D9D9] p-8 rounded-3xl shadow-lg relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/placeholder.svg?height=600&width=1200')] opacity-10 bg-cover bg-center" />
+    <div className="w-full min-h-[600px]  z-auto flex items-center justify-center text-[#D8D9D9] p-8 rounded-3xl shadow-lg relative overflow-hidden">
+      <div className="absolute inset-0  opacity-10 bg-cover bg-center" />
       <Sparkles />
       <div className="relative z-10 flex flex-col items-center max-w-4xl mx-auto text-center">
         <div className="bg-gradient-to-b from-[#151616] to-transparent h-[300px] w-[300px] md:h-[450px] md:w-[450px] relative rounded-full flex justify-center">

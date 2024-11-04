@@ -5,7 +5,7 @@ import { IoCheckmarkCircleSharp } from "react-icons/io5";
 import { BiCommand } from "react-icons/bi";
 import { gradientStyle } from "../../utils";
 
-export default function Component() {
+export default function SecondSection() {
   const [hoveredPoint, setHoveredPoint] = useState(null);
   const labels = [
     { text: "Performance", top: "-1%", left: "39%", rotate: "-50deg" },
