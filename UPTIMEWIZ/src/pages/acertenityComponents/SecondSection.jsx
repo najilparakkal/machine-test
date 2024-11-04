@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { ContainerScroll } from "./SecondSectionContainer";
-import { motion } from "framer-motion";
 
 export const HeroScrollDemo = () => {
   return (
