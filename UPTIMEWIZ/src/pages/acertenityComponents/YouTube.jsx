@@ -7,7 +7,8 @@ const YouTube = ({ image, text, gradientColor }) => {
         className="flex flex-col md:flex-row rounded-2xl gap-8 md:gap-14"
         style={{
           background: `linear-gradient(to bottom, ${gradientColor} 65%, white 100%)`,
-        }}
+        }
+      }
       >
         <div className="p-6 w-full md:w-1/2 flex-shrink-0">
           <img
