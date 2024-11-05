@@ -6,17 +6,26 @@ import { useNavigate } from "react-router-dom";
 import { FaChevronDown } from "react-icons/fa";
 import Blogs from "./Blogs";
 import KeyFeatures from "./KeyFeatures";
+import PricingBtn from "./PricingBtn";
+
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [showComponent, setShowComponent] = useState(false);
-
-  const toggleComponent = () => {
-    setShowComponent((prev) => !prev);
-  };
+  const [activeComponent, setActiveComponent] = useState(null);
+  const [expanded, setExpanded] = useState({}); 
   const navigate = useNavigate();
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleComponentToggle = (component) => {
+    setActiveComponent((prevComponent) =>
+      prevComponent === component ? null : component
+    );
+    setExpanded((prev) => ({
+      ...prev,
+      [component]: !prev[component], // Toggle the specific component
+    }));
   };
 
   useLayoutEffect(() => {
@@ -30,6 +39,7 @@ const NavBar = () => {
     };
   }, [isScrolled]);
 
+  
   return (
     <>
       <nav
@@ -71,24 +81,38 @@ const NavBar = () => {
               Key Features
             </a>
             <FaChevronDown
-                className={`w-4 h-4 transition-transform ${
-                  showComponent ? "rotate-180" : "rotate-0"
-                }`}
-                onClick={toggleComponent}
-              />
-          
+              className={`w-4 h-4 transition-transform ${
+                activeComponent === "KeyFeatures" ? "rotate-180" : "rotate-0"
+              }`}
+              onClick={() => handleComponentToggle("KeyFeatures")}
+            />
+
             <a
               onClick={() => navigate("/pricing")}
               className="hover:text-white transition-colors"
             >
               Pricing
             </a>
+            <FaChevronDown
+              className={`w-4 h-4 transition-transform ${
+                activeComponent === "PricingBtn" ? "rotate-180" : "rotate-0"
+              }`}
+              onClick={() => handleComponentToggle("PricingBtn")}
+            />
+
             <a
               onClick={() => navigate("/blogs")}
               className="hover:text-white transition-colors"
             >
               Blog
             </a>
+            <FaChevronDown
+              className={`w-4 h-4 transition-transform ${
+                activeComponent === "Blogs" ? "rotate-180" : "rotate-0"
+              }`}
+              onClick={() => handleComponentToggle("Blogs")}
+            />
+
             <a
               onClick={() => navigate("/contact")}
               className="hover:text-white transition-colors"
@@ -124,68 +148,95 @@ const NavBar = () => {
         </div>
 
         {isMenuOpen && (
-          <div className="absolute top-14 left-0 right-0 bg-black border-t border-gray-800 text-white flex flex-col space-y-2 px-6 py-3 md:hidden">
-            <a
-              onClick={() => navigate("/features")}
-              className="hover:text-gray-300 transition-colors"
-            >
-              Key Features
-            </a>
-            <a
-              onClick={() => navigate("/pricing")}
-              className="hover:text-gray-300 transition-colors"
-            >
-              Pricing
-            </a>
-            <a
-              onClick={() => navigate("/blogs")}
-              className="hover:text-gray-300 transition-colors"
-            >
-              Blog
-            </a>
-            <a
-              onClick={() => navigate("/contact")}
-              className="hover:text-gray-300 transition-colors"
-            >
-              Contact Us
-            </a>
+        <div className="absolute top-14 left-0 right-0 bg-black border-t border-gray-800 text-white flex flex-col space-y-2 px-6 py-3 md:hidden">
+          <a
+            onClick={() => navigate("/features")}
+            className="flex items-center justify-between hover:text-gray-300 transition-colors"
+          >
+            Key Features
+            <FaChevronDown
+              className={`w-4 h-4 transition-transform ${expanded["KeyFeatures"] ? "rotate-180" : "rotate-0"}`}
+              onClick={() => handleComponentToggle("KeyFeatures")}
+            />
+          </a>
+          {expanded["KeyFeatures"] && (
+            <div className="mt-2 text-white"> {/* Adjust margin as needed */}
+              {/* Additional content for Key Features */}
+              <KeyFeatures />
+            </div>
+          )}
 
-            <button className="bg-white text-black font-semibold w-full py-1 text-sm rounded-lg hover:bg-gray-100 transition-colors">
-              Login
+          <a
+            onClick={() => navigate("/pricing")}
+            className="flex items-center justify-between hover:text-gray-300 transition-colors"
+          >
+            Pricing
+            <FaChevronDown
+              className={`w-4 h-4 transition-transform ${expanded["PricingBtn"] ? "rotate-180" : "rotate-0"}`}
+              onClick={() => handleComponentToggle("PricingBtn")}
+            />
+          </a>
+          {expanded["PricingBtn"] && (
+            <div className=" text-white">
+              <PricingBtn />
+            </div>
+          )}
+
+          <a
+            onClick={() => navigate("/blogs")}
+            className="flex items-center justify-between hover:text-gray-300 transition-colors"
+          >
+            Blog
+            <FaChevronDown
+              className={`w-4 h-4 transition-transform ${expanded["Blogs"] ? "rotate-180" : "rotate-0"}`}
+              onClick={() => handleComponentToggle("Blogs")}
+            />
+          </a>
+          {expanded["Blogs"] && (
+            <div className="mt-2 text-white">
+              <Blogs />
+            </div>
+          )}
+
+          <a
+            onClick={() => navigate("/contact")}
+            className="hover:text-gray-300 transition-colors"
+          >
+            Contact Us
+          </a>
+
+          <button className="bg-white text-black font-semibold w-full py-1 text-sm rounded-lg hover:bg-gray-100 transition-colors">
+            Login
+          </button>
+
+          <div className="flex gap-4 mt-3">
+            <button aria-label="Twitter X" className="hover:text-white transition-colors">
             </button>
 
-            <div className="flex gap-4 mt-3">
-              <button
-                aria-label="Twitter X"
-                className="hover:text-white transition-colors"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="text-gray-400 w-4 h-4"
-                >
-                  <path d="M23.707 1.707a1 1 0 00-1.414-1.414L12 10.586 1.707.293a1 1 0 00-1.414 1.414L10.586 12 .293 22.293a1 1 0 001.414 1.414L12 13.414l10.293 10.293a1 1 0 001.414-1.414L13.414 12l10.293-10.293z" />
-                </svg>
-              </button>
-
-              <button
-                aria-label="Toggle Dark Mode"
-                className="hover:text-white transition-colors"
-              >
-                <LuMoon className="text-gray-400 w-5 h-5" />
-              </button>
-            </div>
+            <button aria-label="Toggle Dark Mode" className="hover:text-white transition-colors">
+              <LuMoon className="text-gray-400 w-5 h-5" />
+            </button>
           </div>
-        )}
+        </div>
+      )}
       </nav>
-      {showComponent && (
-        <div className=" fixed inset-0  opacity-50 z-10 p-4  text-center w-full max-w-full ">
+      {activeComponent === "KeyFeatures" &&!isMenuOpen&& (
+        <div className="fixed inset-0 z-40 p-4 text-center w-full max-w-full">
           <KeyFeatures />
+        </div>
+      )}
+      {activeComponent === "PricingBtn" &&!isMenuOpen&& (
+        <div className="fixed inset-0 z-40 p-4 text-center w-full max-w-full">
+          <PricingBtn />
+        </div>
+      )}
+      {activeComponent === "Blogs" && !isMenuOpen&&(
+        <div className="fixed inset-0 z-40 p-4 text-center w-full max-w-full">
+          <Blogs />
         </div>
       )}
     </>
   );
 };
 
-export default React.memo(NavBar);
+export default NavBar;

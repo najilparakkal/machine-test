@@ -19,7 +19,7 @@ import {
   
   export default function KeyFeatures() {
     return (
-      <div className="p-8 max-w-7xl mx-auto bg-white rounded-lg mt-16">
+      <div className="p-8 max-w-7xl mx-auto bg-white rounded-lg md:mt-16">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-6">
             <h2 className="text-sm font-semibold text-gray-600">BUILD</h2>
